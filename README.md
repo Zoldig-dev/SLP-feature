@@ -1,2 +1,2 @@
 # SLP
-Site pour SLP
+Site pour la société de signalétiqe SLP
