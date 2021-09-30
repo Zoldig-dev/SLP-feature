@@ -1,0 +1,22 @@
+{
+  "name": "slp",
+  "version": "1.0.0",
+  "description": "Site vitrine pour la compagnie SLP",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zoldig-dev/SLP.git"
+  },
+  "author": "Zold",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zoldig-dev/SLP/issues"
+  },
+  "homepage": "https://github.com/Zoldig-dev/SLP#readme"
+}
