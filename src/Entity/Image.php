@@ -37,6 +37,16 @@ class Image
      */
     private $format;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Slider::class, inversedBy="images")
+     */
+    private $slider;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=HomePageClient::class, inversedBy="images")
+     */
+    private $homePageClient;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Image
     public function setFormat(string $format): self
     {
         $this->format = $format;
+
+        return $this;
+    }
+
+    public function getSlider(): ?Slider
+    {
+        return $this->slider;
+    }
+
+    public function setSlider(?Slider $slider): self
+    {
+        $this->slider = $slider;
+
+        return $this;
+    }
+
+    public function getHomePageClient(): ?HomePageClient
+    {
+        return $this->homePageClient;
+    }
+
+    public function setHomePageClient(?HomePageClient $homePageClient): self
+    {
+        $this->homePageClient = $homePageClient;
 
         return $this;
     }
