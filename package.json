@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/Zoldig-dev/SLP/issues"
   },
-  "homepage": "https://github.com/Zoldig-dev/SLP#readme"
+  "homepage": "https://github.com/Zoldig-dev/SLP#readme",
+  "devDependencies": {
+    "sass": "^1.42.1",
+    "sass-loader": "^10.0.0"
+  },
+  "dependencies": {
+    "watch": "^1.0.2"
+  }
 }
