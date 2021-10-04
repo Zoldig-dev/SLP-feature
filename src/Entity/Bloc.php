@@ -27,6 +27,11 @@ class Bloc
      */
     private $orderList;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=PageCustom::class, inversedBy="bloc")
+     */
+    private $pageCustom;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Bloc
     public function setOrderList(int $orderList): self
     {
         $this->orderList = $orderList;
+
+        return $this;
+    }
+
+    public function getPageCustom(): ?PageCustom
+    {
+        return $this->pageCustom;
+    }
+
+    public function setPageCustom(?PageCustom $pageCustom): self
+    {
+        $this->pageCustom = $pageCustom;
 
         return $this;
     }
