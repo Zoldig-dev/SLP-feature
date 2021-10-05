@@ -30,6 +30,7 @@
     "stimulus": "^2.0.0"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^30.0.0",
     "watch": "^0.13.0",
     "webpack-notifier": "^1.14.0"
   }
