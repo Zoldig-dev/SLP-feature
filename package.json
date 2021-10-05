@@ -7,7 +7,10 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-server": "encore dev-server",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,14 @@
   },
   "homepage": "https://github.com/Zoldig-dev/SLP#readme",
   "devDependencies": {
+    "@symfony/stimulus-bridge": "^2.0.0",
+    "@symfony/webpack-encore": "^1.0.0",
     "sass": "^1.42.1",
-    "sass-loader": "^10.0.0"
+    "sass-loader": "^10.0.0",
+    "stimulus": "^2.0.0"
   },
   "dependencies": {
-    "watch": "^1.0.2"
+    "watch": "^0.13.0",
+    "webpack-notifier": "^1.14.0"
   }
 }
