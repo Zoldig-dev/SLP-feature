@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_label(form.content) }}
+    {{ form_widget(form.content, {
+        'attr' : {
+            'id' : 'editor',
+        }
+    }) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

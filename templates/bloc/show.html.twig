@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bloc{% endblock %}
+
+{% block body %}
+    <h1>Bloc</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bloc.id }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ bloc.content }}</td>
+            </tr>
+            <tr>
+                <th>OrderList</th>
+                <td>{{ bloc.orderList }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('bloc_index') }}">back to list</a>
+
+    <a href="{{ path('bloc_edit', {'id': bloc.id}) }}">edit</a>
+
+    {{ include('bloc/_delete_form.html.twig') }}
+{% endblock %}
