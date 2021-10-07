@@ -1,0 +1,26 @@
+.footer {
+  width: 100%;
+  background: var(--gris);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    padding: 1rem 0;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+  &-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 4rem;
+
+    a {
+      width: fit-content;
+    }
+  }
+}
