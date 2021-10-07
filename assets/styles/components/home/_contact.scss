@@ -1,0 +1,44 @@
+@import "assets/styles/colors";
+
+.contact {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.8)),
+  url("../../../../assets/images/bg-contact.jpg");
+  width: 100%;
+  min-height: 50rem;
+
+  &-title {
+    text-transform: uppercase;
+    color: var(--orange);
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    &_item {
+      width: 30rem;
+      height: 35rem;
+      background: var(--noir);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      &-img {
+        width: 100%;
+      }
+      &-description {
+        padding: 2rem;
+        h3 {
+          text-transform: uppercase;
+          padding-bottom: 1rem;
+        }
+        color: white;
+      }
+    }
+  }
+}
