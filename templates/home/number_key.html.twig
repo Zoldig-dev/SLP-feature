@@ -7,20 +7,18 @@
                 <p>Année de création</p>
             </div>
             {% for numberKey in numberKeys %}
-                {% block numberKey %}
                     <div class="numberCard">
-                        <div class="number">{{ numberKey.getProductNumber }}</div>
+                        <div class="number">{{ numberKey.productNumber }}</div>
                         <p>Produits Référencés</p>
                     </div>
                     <div class="numberCard">
-                        <div class="number">{{ numberKey.getStoreNumber }}</div>
+                        <div class="number">{{ numberKey.storeNumber }}</div>
                         <p>Magasins réalisés</p>
                     </div>
                     <div class="numberCard">
-                        <div class="number">{{ numberKey.getPackageNumber }}</div>
+                        <div class="number">{{ numberKey.packageNumber }}</div>
                         <p>Colis envoyés par an</p>
                     </div>
-                {% endblock %}
             {% endfor %}
         </div>
         <div class="solution">
