@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactFormType;
+use App\Repository\HomePageClientRepository;
 use App\Repository\HomePageNumberKeyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -24,14 +25,27 @@ class HomeController extends AbstractController
     private $numberKeyRepository;
 
     /**
+     * @var HomePageClientRepository
+     */
+    private $clientRepository;
+
+    /**
      * @param EntityManagerInterface $em
      * @param HomePageNumberKeyRepository $numberKeyRepository
+     * @param HomePageClientRepository $clientRepository
      */
-    public function __construct(EntityManagerInterface $em, HomePageNumberKeyRepository $numberKeyRepository)
+    public function __construct(EntityManagerInterface $em, HomePageNumberKeyRepository $numberKeyRepository, HomePageClientRepository $clientRepository)
     {
         $this->em = $em;
         $this->numberKeyRepository = $numberKeyRepository;
+        $this->clientRepository = $clientRepository;
     }
+
+    /**
+     * @param EntityManagerInterface $em
+     * @param HomePageNumberKeyRepository $numberKeyRepository
+     */
+
 
     /**
      * @Route("/home", name="home")
@@ -50,12 +64,14 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
+        $clients = $this->clientRepository->findAll();
         $numbers=$this->numberKeyRepository->findAll();
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'form' => $form->createView(),
-            'numberKeys' => $numbers
+            'numberKeys' => $numbers,
+            'clients' => $clients
         ]);
     }
 }
