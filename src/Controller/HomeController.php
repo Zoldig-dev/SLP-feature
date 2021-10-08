@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactFormType;
+use App\Repository\HomePageNumberKeyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,11 +19,18 @@ class HomeController extends AbstractController
     private $em;
 
     /**
-     * @param EntityManagerInterface $em
+     * @var HomePageNumberKeyRepository
      */
-    public function __construct(EntityManagerInterface $em)
+    private $numberKeyRepository;
+
+    /**
+     * @param EntityManagerInterface $em
+     * @param HomePageNumberKeyRepository $numberKeyRepository
+     */
+    public function __construct(EntityManagerInterface $em, HomePageNumberKeyRepository $numberKeyRepository)
     {
         $this->em = $em;
+        $this->numberKeyRepository = $numberKeyRepository;
     }
 
     /**
@@ -42,9 +50,12 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
+        $numbers=$this->numberKeyRepository->findAll();
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'form' => $form->createView(),
+            'numberKeys' => $numbers
         ]);
     }
 }
