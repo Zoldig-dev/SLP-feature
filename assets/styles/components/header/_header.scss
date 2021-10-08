@@ -1,0 +1,18 @@
+header {
+  display: flex;
+  justify-content: center;
+  ul{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b; // switch to bg clair
+    li {
+      color: white;
+      list-style: none;
+      padding: 0 20px;
+      font-family: "Lexend Tera", sans-serif;
+      font-size: 0.8rem;
+    }
+  }
+}
