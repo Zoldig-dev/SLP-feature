@@ -1,18 +1,25 @@
 header {
   display: flex;
   justify-content: center;
-  ul{
-    margin: 0px;
+
+  .nav-bar {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #1b1b1b; // switch to bg clair
-    li {
-      color: white;
-      list-style: none;
-      padding: 0 20px;
-      font-family: "Lexend Tera", sans-serif;
-      font-size: 0.8rem;
+    background-color: var(--gris);
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+      li {
+        color: var(--noir);
+        list-style: none;
+        padding: 0 20px;
+        font-family: "Lexend Tera", sans-serif;
+        font-size: 0.8rem;
+      }
     }
   }
 }
