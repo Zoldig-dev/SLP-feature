@@ -1,27 +1,27 @@
-<section class="homeNumberkey">
-    <div class="container">
+<section class="homeNumberKey">
+    <div class="homeNumberKey-container">
         <h2>Une surface d’entrepôt de 6000M², local hautement sécurisé sous télésurveillance, équipé de 8 quais niveleurs.</h2>
-        <div class="homeClientGrid">
-            <div class="numberCard">
-                <div class="number">1992</div>
+        <div class="homeNumberKey-grid">
+            <div class="homeNumberKey-card">
+                <div class="homeNumberKey-number">1992</div>
                 <p>Année de création</p>
             </div>
             {% for numberKey in numberKeys %}
-                    <div class="numberCard">
-                        <div class="number">{{ numberKey.productNumber }}</div>
+                    <div class="homeNumberKey-card">
+                        <div class="homeNumberKey-number">{{ numberKey.productNumber }}</div>
                         <p>Produits Référencés</p>
                     </div>
-                    <div class="numberCard">
-                        <div class="number">{{ numberKey.storeNumber }}</div>
+                    <div class="homeNumberKey-card">
+                        <div class="homeNumberKey-number">{{ numberKey.storeNumber }}</div>
                         <p>Magasins réalisés</p>
                     </div>
-                    <div class="numberCard">
-                        <div class="number">{{ numberKey.packageNumber }}</div>
+                    <div class="homeNumberKey-card">
+                        <div class="homeNumberKey-number">{{ numberKey.packageNumber }}</div>
                         <p>Colis envoyés par an</p>
                     </div>
             {% endfor %}
         </div>
-        <div class="solution">
+        <div class="homeNumberKey-solution">
             <p>Solutions d’externalisation de la gestion de vos stocks de produits de signalétique et d’approvisionnement de vos réseaux.</p>
             <p>Solutions d’externalisation de la gestion de vos flux de produits marchands et/ou non marchands pour vos réseaux.</p>
             <p>Solutions de stockage à la « carte » en fonction de vos pics d’activité sur des durées adaptées.</p>
@@ -29,7 +29,7 @@
             <p>Solutions de production et de pose de matériel de signalétique intérieure et extérieure en France et à l’étranger.</p>
             <p>Solutions de transport adaptées à vos contraintes.</p>
         </div>
-        <p class="gras">Que vous soyez réseau de distribution, industriel, site marchand, S L P : la solution à vos besoins.</p>
+        <p class="homeNumberKey-bold">Que vous soyez réseau de distribution, industriel, site marchand, S L P : la solution à vos besoins.</p>
         <h3>Nous mettons à votre disposition des solutions techniques et économiques d’externalisation spécialisées et performantes.</h3>
     </div>
 </section>
