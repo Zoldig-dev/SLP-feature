@@ -15,6 +15,13 @@
   width: 1140px;
 }
 
+// flex style
 .flex {
   display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
 }

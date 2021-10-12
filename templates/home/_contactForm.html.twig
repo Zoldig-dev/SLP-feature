@@ -1,2 +1,27 @@
-{{ form_start(form)}}
+{{ form_start(form, {'attr' : {
+    'class' : 'contactForm flex column'
+}}) }}
+<h3>FORMULAIRE DE CONTACT</h3>
+<div class="contactForm-item flex column">
+    {{ form_label(form.isContact) }}
+    {{ form_widget(form.isContact) }}
+</div>
+<div class="contactForm-item flex column">
+    {{ form_widget(form.societyName) }}
+</div>
+<div class="contactForm-item flex">
+    {{ form_widget(form.firstName) }}
+    {{ form_widget(form.lastName) }}
+</div>
+<div class="contactForm-item flex">
+    {{ form_widget(form.email) }}
+    {{ form_widget(form.phone) }}
+</div>
+<div class="contactForm-item flex column">
+{#    {{ form_label(form.text) }}#}
+    {{ form_widget(form.text) }}
+</div>
+{{ form_widget(form.submit, {'attr': {
+    'class' : 'contactForm-btn'
+}}) }}
 {{ form_end(form) }}
