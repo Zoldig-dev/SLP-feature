@@ -5,6 +5,10 @@
   url("../../../../assets/images/bg-homeTitleSection.jpg");
   width: 100%;
   min-height: 25rem;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  position: fixed;
 
   h1 {
     text-transform: uppercase;

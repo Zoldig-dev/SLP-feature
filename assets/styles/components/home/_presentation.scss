@@ -1,16 +1,18 @@
 @import "assets/styles/variables";
 
+.transparent{
+  min-height: 25rem;
+}
+
 .presentation {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.8)),
   url("../../../../assets/images/bg-presentation.jpg");
   width: 100%;
   min-height: 50rem;
+  display: flex;
+  justify-content: center;
 
-  &-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem 4rem;
+  //.container {
 
     h2{
       color: white;
@@ -24,7 +26,7 @@
     p {
       color: white;
     }
-  }
+  //}
   &-grid {
     display: grid;
     padding: 4rem 0;
