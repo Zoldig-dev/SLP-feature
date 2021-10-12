@@ -1,0 +1,16 @@
+@import "assets/styles/colors";
+
+.homeTitle {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.8)),
+  url("../../../../assets/images/bg-homeTitleSection.jpg");
+  width: 100%;
+  min-height: 25rem;
+
+  h1 {
+    text-transform: uppercase;
+    color: var(--orange);
+    text-align: center;
+    font-size: 3rem;
+    padding: 2rem 0;
+  }
+}
