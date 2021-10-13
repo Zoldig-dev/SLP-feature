@@ -10,9 +10,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 
-    h1{
+    h1 {
       width: fit-content;
     }
 
@@ -29,10 +30,74 @@ header {
         padding: 0 20px;
         font-family: "Lexend Tera", sans-serif;
         font-size: 0.8rem;
+
         a {
           cursor: pointer;
         }
       }
     }
+
+    .burger {
+      display: none;
+
+      .line1 {
+        width: 25px;
+        height: 3px;
+        background-color: var(--rouge);
+        margin: 5px;
+      }
+
+      .line2 {
+        width: 25px;
+        height: 3px;
+        background-color: var(--orange);
+        margin: 5px;
+      }
+
+      .line3 {
+        width: 25px;
+        height: 3px;
+        background-color: var(--noir);
+        margin: 5px;
+      }
+    }
   }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    //overflow: hidden;
+  }
+  nav {
+    .nav-links {
+      position: absolute;
+      right: 0;
+      background: var(--noir);
+      height: 40vh;
+      top: 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly !important;
+      align-items: center;
+      width: 50%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+
+      li {
+        background: var(--orange);
+        padding: 15px 30px !important;
+        color: var(--gris) !important;
+        opacity: 0;
+        width: 80%;
+      }
+    }
+    .burger{
+      display: block !important;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-active{
+  transform: translateX(0%) !important;
 }
