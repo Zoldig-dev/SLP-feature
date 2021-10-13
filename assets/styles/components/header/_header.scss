@@ -74,7 +74,7 @@ header {
       right: 0;
       background: var(--noir);
       height: 40vh;
-      top: 8vh;
+      top: 6.5vh;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly !important;
@@ -100,4 +100,16 @@ header {
 
 .nav-active{
   transform: translateX(0%) !important;
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+
+     }
 }
