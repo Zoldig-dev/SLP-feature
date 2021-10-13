@@ -1,18 +1,20 @@
-<div class="contact">
-    <h2 class="contact-title">nous contacter</h2>
-    <div class="contact-box">
-        <div class="contact-box_item">
-             {% include 'home/_contactForm.html.twig' %}
-        </div>
-        <div class="contact-box_item">
-            <img
-                    class="contact-box_item-img"
-                    src="{{ asset('build/images/SLP-adress.PNG') }}"
-                    alt="photo de google map à l'adresse de l'entreprise SLP">
-            <div class="contact-box_item-description">
-                <h3>slp signalétique logistique performance</h3>
-                <p>Bureau Principal</p>
-                <p>Rue Joseph Cugnot, 42160 Andrézieux-Bouthéon, France</p>
+<div class="contact flex">
+    <div class="container">
+        <h2 class="contact-title">nous contacter</h2>
+        <div class="contact-box flex">
+            <div class="contact-box_item">
+                {% include 'home/_contactForm.html.twig' %}
+            </div>
+            <div class="contact-box_item flex column">
+                <img
+                        class="contact-box_item-img"
+                        src="{{ asset('build/images/SLP-adress.PNG') }}"
+                        alt="photo de google map à l'adresse de l'entreprise SLP">
+                <div class="contact-box_item-description">
+                    <h3>slp signalétique logistique performance</h3>
+                    <p>Bureau Principal</p>
+                    <p>Rue Joseph Cugnot, 42160 Andrézieux-Bouthéon, France</p>
+                </div>
             </div>
         </div>
     </div>

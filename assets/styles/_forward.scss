@@ -1,8 +1,9 @@
 @forward "reset";
-@forward "colors";
-@forward "font";
+@forward "variables";
 @forward "components/home/home";
 @forward "components/home/contact";
 @forward "components/home/clients";
+@forward "components/home/presentation";
 @forward "components/footer/footer";
 @forward "components/header/header";
+@forward "components/home/home_title";

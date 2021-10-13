@@ -1,0 +1,27 @@
+// color
+:root {
+  --orange : #FF6601;
+  --rouge : #FF3F00;
+  --noir : #2C2C2C;
+  --gris : #F0F0F0;
+}
+
+// font
+
+
+// class variable
+
+.container {
+  width: 1140px;
+}
+
+// flex style
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.row {
+  flex-direction: row;
+}
