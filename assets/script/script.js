@@ -13,7 +13,7 @@ ClassicEditor
 // Scroll Down -------------------------------
 
 let scrollDownTag = document.querySelector(".presentation-tab");
-let screenHeight = screen.height;
+let screenHeight = window.innerHeight;
 
 scrollDownTag.onclick = (e) =>{
     window.scrollTo(0, screenHeight);

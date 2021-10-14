@@ -12,7 +12,7 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
 }
 
 .presentation-tab{
-  //background-color: var(--gris);
+  max-height: 64px;
 }
 
 .presentation {
@@ -22,7 +22,7 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
   min-height: 50rem;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 2rem;
 
   //.container {
 
