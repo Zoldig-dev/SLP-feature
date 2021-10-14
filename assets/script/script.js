@@ -9,3 +9,12 @@ ClassicEditor
     .catch( error => {
         console.error( error );
     } );
+
+// Scroll Down -------------------------------
+
+let scrollDownTag = document.querySelector(".presentation-tab");
+let screenHeight = screen.height;
+
+scrollDownTag.onclick = (e) =>{
+    window.scrollTo(0, screenHeight);
+}
