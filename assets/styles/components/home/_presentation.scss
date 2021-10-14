@@ -1,7 +1,12 @@
 @import "assets/styles/variables";
 
+/**
+Ce fichier est utilisé par /templates/home/presentation.html.twig
+**/
+
 .presentation-transparent{
-  min-height: 25rem;
+  //100vh = 100% de l'écran
+  min-height: 100vh;
 }
 
 .presentation {
