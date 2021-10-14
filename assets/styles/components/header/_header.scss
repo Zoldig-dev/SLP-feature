@@ -31,12 +31,14 @@ header {
 
         a {
           cursor: pointer;
-          h5{
+
+          h5 {
             display: inline-block;
             padding: 10px 20px;
             position: relative;
             color: var(--noir);
-            &:after{
+
+            &:after {
               bottom: 0;
               content: "";
               display: block;
@@ -47,11 +49,13 @@ header {
               transition: width 0.3s ease 0s, left 0.3s ease 0s;
               width: 0;
             }
-            &:hover:after{
+
+            &:hover:after {
               width: 100%;
               left: 0;
             }
           }
+
           i {
             display: none;
           }
@@ -112,17 +116,19 @@ header {
 
       li {
         background: var(--orange);
-        padding: 15px !important; ;
+        padding: 15px !important;;
         opacity: 0;
         width: 80%;
+
         a {
           display: flex;
           justify-content: space-between;
           align-items: center;
 
-          h5{
+          h5 {
             color: var(--gris) !important;
           }
+
           i {
             display: block !important;
             color: var(--gris) !important;
@@ -133,34 +139,38 @@ header {
       }
 
     }
-    .burger{
+
+    .burger {
       display: block !important;
       cursor: pointer;
     }
   }
 }
 
-.nav-active{
+.nav-active {
   transform: translateX(0%) !important;
 }
 
 @keyframes navLinkFade {
-  from{
+  from {
     opacity: 0;
     transform: translateX(50%);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateX(0%);
 
-     }
+  }
 }
-.toggle .line1{
-  transform: rotate(-45deg) translate(-5px,6px);
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
-.toggle .line2{
+
+.toggle .line2 {
   opacity: 0;
 }
-.toggle .line3{
-  transform: rotate(45deg) translate(-5px,-6px);
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
