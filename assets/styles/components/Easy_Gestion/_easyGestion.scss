@@ -1,0 +1,30 @@
+.easyG {
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  color: white;
+  .container {
+    background: var(--noir);
+    padding: 2rem 3rem;
+  }
+  &-title {
+    color: var(--orange);
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  &-description {
+    text-align: center;
+    padding-bottom: 1rem;
+    h3 {
+      color: var(--orange);
+      padding: 0.5rem 0;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  &-slider {
+    padding: 1rem 0;
+  }
+}

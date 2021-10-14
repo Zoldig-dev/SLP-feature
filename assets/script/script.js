@@ -1,4 +1,5 @@
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {initSwiper} from "./swiper";
 
 // CKeditor ----------------------------------
 ClassicEditor
@@ -12,9 +13,12 @@ ClassicEditor
 
 // Scroll Down -------------------------------
 
-let scrollDownTag = document.querySelector(".presentation-tab");
-let screenHeight = window.innerHeight;
+// let scrollDownTag = document.querySelector(".presentation-tab");
+// let screenHeight = window.innerHeight;
+//
+// scrollDownTag.onclick = (e) =>{
+//     window.scrollTo(0, screenHeight);
+// }
 
-scrollDownTag.onclick = (e) =>{
-    window.scrollTo(0, screenHeight);
-}
+// Swiper slider
+initSwiper();
