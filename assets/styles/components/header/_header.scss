@@ -23,9 +23,7 @@ header {
       justify-content: center;
       align-items: center;
 
-
       li {
-        color: var(--noir);
         list-style: none;
         padding: 0 20px;
         font-family: "Lexend Tera", sans-serif;
@@ -33,6 +31,30 @@ header {
 
         a {
           cursor: pointer;
+          h5{
+            display: inline-block;
+            padding: 10px 20px;
+            position: relative;
+            color: var(--noir);
+            &:after{
+              bottom: 0;
+              content: "";
+              display: block;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              background: var(--orange);
+              transition: width 0.3s ease 0s, left 0.3s ease 0s;
+              width: 0;
+            }
+            &:hover:after{
+              width: 100%;
+              left: 0;
+            }
+          }
+          i {
+            display: none;
+          }
         }
       }
     }
@@ -82,7 +104,7 @@ header {
       top: 6.5vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly !important;
+      justify-content: space-around !important;
       align-items: center;
       width: 70%;
       transform: translateX(100%);
@@ -90,13 +112,22 @@ header {
 
       li {
         background: var(--orange);
-        padding: 15px 30px !important;
-        color: var(--gris) !important;
+        padding: 15px !important; ;
         opacity: 0;
         width: 80%;
         a {
           display: flex;
           justify-content: space-between;
+          align-items: center;
+
+          h5{
+            color: var(--gris) !important;
+          }
+          i {
+            display: block !important;
+            color: var(--gris) !important;
+
+          }
 
         }
       }
