@@ -6,7 +6,13 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
 
 .presentation-transparent{
   //100vh = 100% de l'écran
-  min-height: 100vh;
+  min-height: 92vh;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.presentation-tab{
+  //background-color: var(--gris);
 }
 
 .presentation {
