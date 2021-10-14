@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SLP Easy Gestion{% endblock %}
+{% block body %}
+
+    <section class="easyG flex column">
+        <div class="container">
+            <div class="easyG-title">
+                <h2>SLP EASY-GESTION</h2>
+            </div>
+            <div class="easyG-description">
+                <p><strong>S L P</strong> met à la disposition de ses clients un outil de gestion via le Web permettant
+                    :</p>
+
+                <h3>Pour qui ?</h3>
+                <p>Aux collaborateurs du siège, dûment habilités, d’avoir, en temps réel, une vision globale ou
+                    détaillée :</p>
+                <ul>
+                    <li>des utilisateurs</li>
+                    <li>des produits</li>
+                    <li>des commandes effectuées par leur réseau de vente</li>
+                    <li>de l’état du stock</li>
+                    <li>du suivi des livraisons fournisseurs</li>
+                    <li>des rotations produits</li>
+                    <li>des commandes de réassort</li>
+                    <li>Etc…</li>
+                </ul>
+
+                <h3>Pour faire quoi ?</h3>
+                <p>Aux points de vente de commander quotidiennement et facilement le matériel dont ils ont besoin.</p>
+                <p>De connaître l’historique de leurs commandes.</p>
+
+                <h3>Mais encore ?</h3>
+                <p>Cet outil est personnalisé au nom du client et totalement sécurisé.</p>
+                <p>Il permet, en fonction de ses besoins : une validation de commande à 3 niveaux</p>
+            </div>
+            <div class="easyG-slider">
+                {% include 'slp_easy_gestion/_sliderEasyGestion.html.twig' %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
