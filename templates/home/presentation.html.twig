@@ -1,14 +1,101 @@
-<div class="transparent">
+{#
+<!--Toutes les classes presentation sont contenus dans le fichier:
+/assets/styles/components/home/_presentation.scss-->
+<!-- Les classes flex row et column sont dans
+/assets/styles/_variables.scss-->
+#}
 
+<div class="presentation-transparent flex">
+    {#
+    <!--Pour le scrollDown :
+    Zone de transparence laissant apparaitre le contenu de,
+    /templates/home/home_title.html.twig-->
+    #}
+    <div class="presentation-tab">
+
+        {#
+        <!--le svg ci-dessous dessine l'onglet du Scroll Down-->
+        #}
+        <svg
+                width="64"
+                height="64"
+                viewBox="0 0 64 64"
+                version="1.1"
+                id="svg5"
+                inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+                sodipodi:docname="onglet1.svg"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:svg="http://www.w3.org/2000/svg">
+            <sodipodi:namedview
+                    id="namedview7"
+                    pagecolor="#ffffff"
+                    bordercolor="#666666"
+                    borderopacity="1.0"
+                    inkscape:pageshadow="2"
+                    inkscape:pageopacity="0.0"
+                    inkscape:pagecheckerboard="true"
+                    inkscape:document-units="px"
+                    showgrid="false"
+                    inkscape:zoom="2.6708955"
+                    inkscape:cx="-22.464376"
+                    inkscape:cy="38.002236"
+                    inkscape:window-width="1366"
+                    inkscape:window-height="715"
+                    inkscape:window-x="-8"
+                    inkscape:window-y="22"
+                    inkscape:window-maximized="1"
+                    inkscape:current-layer="layer1"
+                    units="px"
+                    scale-x="1" />
+            <defs
+                    id="defs2" />
+            <g
+                    inkscape:label="Calque 1"
+                    inkscape:groupmode="layer"
+                    id="layer1">
+                <path
+                        id="rect31"
+                        style="fill:#f0f0f0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.183899;stroke-opacity:1"
+                        d="M 32,0 A 31.999998,31.999998 0 0 0 0,32 V 64 H 32 64 V 32 A 31.999998,31.999998 0 0 0 32,0 Z" />
+                <path
+                        style="fill:none;stroke:#ff6601;stroke-width:2.16642;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 7.0341699,37.187189 c 25.0000001,-16.918325 25.0000001,-16.918325 50.0000011,0"
+                        id="path6131-2-5"
+                        sodipodi:nodetypes="cc" />
+                <path
+                        style="fill:none;stroke:#ff3f00;stroke-width:2.16642;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 7.0729403,28.715343 c 24.9999997,-16.918325 24.9999997,-16.918325 50.0000017,0"
+                        id="path6131-2"
+                        sodipodi:nodetypes="cc" />
+                <path
+                        style="fill:none;stroke:#2c2c2c;stroke-width:2.16642;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                        d="m 7,20.799369 c 25,-16.9183252 25,-16.9183252 50.000001,0"
+                        id="path6131"
+                        sodipodi:nodetypes="cc" />
+            </g>
+        </svg>
+    </div>
 </div>
+
 <section class="presentation">
+
+{#    <!--la classes container est dans le fichier:
+      /assets/styles/_variables.scss-->#}
     <div class="container">
         <h2>Une surface d’entrepôt de 6000M², local hautement sécurisé sous télésurveillance, équipé de 8 quais niveleurs.</h2>
         <div class="presentation-grid">
+{#            <!--La valeur de cette carte est statiques -->#}
             <div class="presentation-card">
                 <div class="presentation-number">1992</div>
                 <p>Année de création</p>
             </div>
+            {# permet de recuperer les valeurs de la table home_page_number_key
+            voir :
+            /src/Entity/HomePageNumberKey.php
+            /scr/Repository/HomePageNumberKeyRepository.php
+            /src/Controller/HomeController.php#}
             {% for numberKey in numberKeys %}
                     <div class="presentation-card">
                         <div class="presentation-number">{{ numberKey.productNumber }}</div>

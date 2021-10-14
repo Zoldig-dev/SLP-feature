@@ -1,7 +1,18 @@
 @import "assets/styles/variables";
 
-.transparent{
-  min-height: 25rem;
+/**
+Ce fichier est utilisé par /templates/home/presentation.html.twig
+**/
+
+.presentation-transparent{
+  //100vh = 100% de l'écran
+  min-height: 92vh;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.presentation-tab{
+  max-height: 64px;
 }
 
 .presentation {
@@ -11,6 +22,7 @@
   min-height: 50rem;
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
 
   //.container {
 

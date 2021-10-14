@@ -1,12 +1,18 @@
 @import "assets/styles/variables";
 
+/**
+Ce fichier est utilisé par /templates/home/home_title.html.twig
+**/
+
 .homeTitle {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.8)),
   url("../../../../assets/images/bg-homeTitleSection.jpg");
   width: 100%;
-  min-height: 25rem;
+  //100vh = 100% de l'écran
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: -1;
   position: fixed;
 
@@ -15,6 +21,6 @@
     color: var(--orange);
     text-align: center;
     font-size: 3rem;
-    padding: 2rem 0;
+    padding-bottom: 20vh;
   }
 }
