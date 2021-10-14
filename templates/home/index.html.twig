@@ -3,9 +3,13 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    {% include 'home/home_title.html.twig' %}
+    <section class="homeTitle">
+        {% include 'home/home_title.html.twig' %}
+    </section>
     {% include 'home/presentation.html.twig' %}
-    {% include 'home/clients.html.twig' %}
+    <section class="client">
+        {% include 'home/clients.html.twig' %}
+    </section>
     <section>
         {% include 'home/contact.html.twig' %}
     </section>

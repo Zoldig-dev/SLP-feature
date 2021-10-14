@@ -1,12 +1,13 @@
-<section class="container">
+<div class="container">
     <div class="ils_nous_font_confiance">
         <h2>Ils Nous Font Confiance </h2>
-        {% for client in clients %}
-            <div class="grid">
+        <div class="grid">
+            {% for client in clients %}
+
                 <div class="box_client">
-{#                    <img class="logo_client" src="{{ client.link }}" width="100px" alt="logo_client">#}
+                    <img class="logo_client" src="{{ client.link }}" width="100px" alt="logo_client">
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</section>
+</div>

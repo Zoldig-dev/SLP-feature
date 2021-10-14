@@ -5,11 +5,17 @@ Ce fichier est utilisé par /templates/home/home_title.html.twig
 **/
 
 .homeTitle {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0,0.8)),
-  url("../../../../assets/images/bg-homeTitleSection.jpg");
+  background-image:
+          linear-gradient(
+                          to right,
+                          rgba(0, 0, 0, 0.6),
+                          rgba(0, 0, 0,0.8)),
+          url("../../../../assets/images/bg-homeTitleSection.jpg");
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   //100vh = 100% de l'écran
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
