@@ -1,5 +1,6 @@
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import {initSwiper} from "./swiper";
+import {scrollDownTag} from "./scrollDownTag";
 
 // CKeditor ----------------------------------
 ClassicEditor
@@ -39,15 +40,8 @@ const navSlide = () => {
 
 navSlide()
 
-
-// Scroll Down -------------------------------
-
-// let scrollDownTag = document.querySelector(".presentation-tab");
-// let screenHeight = window.innerHeight;
-//
-// scrollDownTag.onclick = (e) =>{
-//     window.scrollTo(0, screenHeight);
-// }
-
 // Swiper slider
 initSwiper();
+
+// Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
+scrollDownTag();
