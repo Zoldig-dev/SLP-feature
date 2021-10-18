@@ -4,7 +4,7 @@
 //
 
 export function scrollDownTag(){
-    const scrollDownTag = document.querySelector(".presentation-tab");
+    const scrollDownTag = document.querySelector(".presentation-tag");
     let screenHeight = window.innerHeight;
 
     scrollDownTag.onclick = (e) =>{
