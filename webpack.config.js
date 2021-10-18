@@ -20,6 +20,7 @@ Encore
         to: 'images/[path][name].[ext]',
     })
 
+
     /*
      * ENTRY CONFIG
      *

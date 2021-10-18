@@ -33,14 +33,14 @@ body {
         @include m.mq(tablet) {
           position: absolute;
           right: 0;
-          background: var(--noir);
+          background: var(--gris);
           height: 50vh;
           top: 6.5vh;
           display: flex;
           flex-direction: column;
           justify-content: space-around !important;
           align-items: center;
-          width: 70%;
+          width: 80%;
           transform: translateX(100%);
           transition: transform 0.5s ease-in;
         }
@@ -63,6 +63,7 @@ body {
               display: flex;
               justify-content: space-between;
               align-items: center;
+              text-decoration: none !important;
             }
 
             h5 {
@@ -96,7 +97,9 @@ body {
               display: none;
               @include m.mq(tablet) {
                 display: block !important;
-                color: var(--gris) !important;
+                color: var(--gris);
+
+
               }
             }
           }

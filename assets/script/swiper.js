@@ -1,10 +1,6 @@
 // Swiper slider
 
-import Swiper, {
-    Navigation,
-    Autoplay,
-    EffectCube,
-} from "swiper";
+import Swiper, { Navigation, Autoplay, EffectCube, } from "swiper";
 
 Swiper.use([Navigation, Autoplay, EffectCube]);
 
