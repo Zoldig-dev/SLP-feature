@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit HomePageNumberKey{% endblock %}
+
+{% block body %}
+    <h1>Edit HomePageNumberKey</h1>
+
+    {{ include('home_page_number_key/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('home_page_number_key_index') }}">back to list</a>
+
+    {{ include('home_page_number_key/_delete_form.html.twig') }}
+{% endblock %}
