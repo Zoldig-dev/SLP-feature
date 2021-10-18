@@ -52,6 +52,19 @@
 .justify-sa {
   justify-content: space-around;
 }
+// ALIGN-ITEM
+// center
+.align-c {
+  align-items: center;
+}
+// flex-start
+.align-s {
+  align-items: flex-start;
+}
+// flex-end
+.align-e {
+  align-items: flex-end;
+}
 
 // ! PADDING !
 @for $i from 1 through 10 {
@@ -113,4 +126,39 @@
   .ml-#{$i} {
     margin-left : 0rem+$i;
   }
+}
+
+// ! TEXT-ALIGN !
+// center
+.center {
+  text-align: center;
+}
+// start
+.start {
+  text-align: start;
+}
+// end
+.end {
+  text-align: end;
+}
+
+// ! FONT-SIZE !
+@for $i from 1 through 5 {
+  .size-#{$i} {
+    font-size: 0rem+$i;
+  }
+}
+
+// ! FONT-WEIGHT !
+// bold
+.bold {
+  font-weight: bold;
+}
+// bolder
+.bolder {
+  font-weight: bolder;
+}
+// lighter
+.lighter {
+  font-weight: lighter;
 }

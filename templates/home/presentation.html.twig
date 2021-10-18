@@ -5,7 +5,7 @@
 /assets/styles/_variables.scss-->
 #}
 
-<div class="presentation-transparent flex">
+<div class="presentation-transparent flex align-c">
     {#
     <!--Pour le scrollDown :
     Zone de transparence laissant apparaitre le contenu de,
@@ -51,9 +51,9 @@
                     inkscape:window-x="1358"
                     inkscape:window-y="22"
                     inkscape:window-maximized="1"
-                    inkscape:current-layer="layer4" />
+                    inkscape:current-layer="layer4"/>
             <defs
-                    id="defs2" />
+                    id="defs2"/>
             <g
                     inkscape:label="Fond"
                     inkscape:groupmode="layer"
@@ -64,7 +64,7 @@
                         id="path846"
                         style="fill:#f0f0f0;fill-opacity:1;stroke:none;stroke-width:3.81804;stroke-linecap:round;stroke-opacity:1"
                         d="M 64,0 A 63.999997,63.999997 0 0 0 0,64 H 128 A 63.999997,63.999997 0 0 0 64,0 Z"
-                        transform="scale(0.26458333)" />
+                        transform="scale(0.26458333)"/>
             </g>
             <g
                     inkscape:groupmode="layer"
@@ -77,7 +77,7 @@
                         style="display:inline;fill:none;fill-opacity:1;stroke:#ff6601;stroke-width:2.00002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                         d="M 113.19336,39.402344 C 103.87657,20.769617 84.832213,8.9998765 64,9 43.172918,9.0102317 24.138182,20.783703 14.828125,39.414062"
                         transform="scale(0.26458333)"
-                        sodipodi:nodetypes="ccc" />
+                        sodipodi:nodetypes="ccc"/>
             </g>
             <g
                     inkscape:groupmode="layer"
@@ -90,7 +90,7 @@
                         style="display:inline;fill:none;fill-opacity:1;stroke:#ff3f00;stroke-width:1.99981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                         d="M 106.03906,42.980469 C 98.077323,27.05751 81.802525,16.999557 64,17 46.202337,17.008802 29.936333,27.069772 21.980469,42.990234"
                         transform="scale(0.26458333)"
-                        sodipodi:nodetypes="ccc" />
+                        sodipodi:nodetypes="ccc"/>
             </g>
             <g
                     inkscape:groupmode="layer"
@@ -103,55 +103,64 @@
                         style="display:inline;fill:none;fill-opacity:1;stroke:#2c2c2c;stroke-width:1.99969;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                         d="M 98.882812,46.558594 C 92.27645,33.346023 78.772138,24.999964 64,25 49.231752,25.00736 35.734475,33.355832 29.132812,46.566406"
                         transform="scale(0.26458333)"
-                        sodipodi:nodetypes="ccc" />
+                        sodipodi:nodetypes="ccc"/>
             </g>
         </svg>
 
     </div>
 </div>
 
-<section class="presentation">
+<section class="presentation flex justify-c pt-2">
 
-{#    <!--la classes container est dans le fichier:
-      /assets/styles/_variables.scss-->#}
+    {# <!--la classes container est dans le fichier:
+      /assets/styles/_variables.scss--> #}
     <div class="container">
         <div class="presentation-box">
-            <h2>Une surface d’entrepôt de 6000M², local hautement sécurisé sous télésurveillance, équipé de 8 quais niveleurs.</h2>
+            <h2 class="size-2 center p-2">Une surface d’entrepôt de 6000M², local hautement sécurisé sous
+                télésurveillance,
+                équipé de 8 quais niveleurs.</h2>
             <div class="presentation-grid">
-    {#            <!--La valeur de cette carte est statiques -->#}
-                <div class="presentation-card">
-                    <div class="presentation-number">1992</div>
+                {# <!--La valeur de cette carte est statiques --> #}
+                <div class="presentation-card p-1 flex column justify-sa align-c">
+                    <div class="size-3">1992</div>
                     <p>Année de création</p>
                 </div>
                 {# permet de recuperer les valeurs de la table home_page_number_key
                 voir :
                 /src/Entity/HomePageNumberKey.php
                 /scr/Repository/HomePageNumberKeyRepository.php
-                /src/Controller/HomeController.php#}
+                /src/Controller/HomeController.php #}
                 {% for numberKey in numberKeys %}
-                        <div class="presentation-card">
-                            <div class="presentation-number">{{ numberKey.productNumber }}</div>
-                            <p>Produits Référencés</p>
-                        </div>
-                        <div class="presentation-card">
-                            <div class="presentation-number">{{ numberKey.storeNumber }}</div>
-                            <p>Magasins réalisés</p>
-                        </div>
-                        <div class="presentation-card">
-                            <div class="presentation-number">{{ numberKey.packageNumber }}</div>
-                            <p>Colis envoyés par an</p>
-                        </div>
+                    <div class="presentation-card p-1 flex column justify-sa align-c">
+                        <div class="size-3">{{ numberKey.productNumber }}</div>
+                        <p>Produits Référencés</p>
+                    </div>
+                    <div class="presentation-card p-1 flex column justify-sa align-c">
+                        <div class="size-3">{{ numberKey.storeNumber }}</div>
+                        <p>Magasins réalisés</p>
+                    </div>
+                    <div class="presentation-card p-1 flex column justify-sa align-c">
+                        <div class="size-3">{{ numberKey.packageNumber }}</div>
+                        <p>Colis envoyés par an</p>
+                    </div>
                 {% endfor %}
             </div>
-            <div class="presentation-solution">
-                <p>Solutions d’externalisation de la gestion de vos stocks de produits de signalétique et d’approvisionnement de vos réseaux.</p>
-                <p>Solutions d’externalisation de la gestion de vos flux de produits marchands et/ou non marchands pour vos réseaux.</p>
-                <p>Solutions de stockage à la « carte » en fonction de vos pics d’activité sur des durées adaptées.</p>
-                <p>Solutions de colisage, de conditionnement à façon pour répondre avec réactivité aux impératifs plannings de vos opérations promotionnelles.</p>
-                <p>Solutions de production et de pose de matériel de signalétique intérieure et extérieure en France et à l’étranger.</p>
-                <p>Solutions de transport adaptées à vos contraintes.</p>
-                <p class="presentation-bold">Que vous soyez réseau de distribution, industriel, site marchand, S L P : la solution à vos besoins.</p>
-                <h3>Nous mettons à votre disposition des solutions techniques et économiques d’externalisation spécialisées et performantes.</h3>
+            <div class="presentation-solution flex column justify-c align-c">
+                <p class="center">Solutions d’externalisation de la gestion de vos stocks de produits de signalétique et
+                    d’approvisionnement de vos réseaux.</p>
+                <p class="center">Solutions d’externalisation de la gestion de vos flux de produits marchands et/ou non
+                    marchands pour vos réseaux.</p>
+                <p class="center">Solutions de stockage à la « carte » en fonction de vos pics d’activité sur des durées
+                    adaptées.</p>
+                <p class="center">Solutions de colisage, de conditionnement à façon pour répondre avec réactivité aux
+                    impératifs plannings de vos opérations promotionnelles.</p>
+                <p class="center">Solutions de production et de pose de matériel de signalétique intérieure et
+                    extérieure en France et à l’étranger.</p>
+                <p class="center">Solutions de transport adaptées à vos contraintes.</p>
+                <p class="center bold">Que vous soyez réseau de distribution, industriel, site marchand, S
+                    L P : la solution à vos besoins.</p>
+                <h3 class="center">Nous mettons à votre disposition des solutions techniques et économiques
+                    d’externalisation spécialisées et performantes.</h3>
             </div>
         </div>
     </div>

@@ -8,7 +8,6 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
   //100vh = 100% de l'écran
   min-height: 96vh;
   flex-direction: column-reverse;
-  align-items: center;
 }
 
 .presentation-tab{
@@ -20,27 +19,10 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
   url("../../../../assets/images/bg-presentation.jpg");
   width: 100%;
   min-height: 50rem;
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
+  color: white;
 
   &-box {
     margin: 0 1rem 0 1rem;
-
-    h2{
-      color: white;
-      text-align: center;
-      font-size: 2rem;
-      padding: 2rem;
-    }
-    h3 {
-      color: white;
-      text-align: center;
-    }
-    p {
-      color: white;
-      text-align: center;
-    }
   }
   &-grid {
     display: grid;
@@ -58,32 +40,14 @@ Ce fichier est utilisé par /templates/home/presentation.html.twig
   }
 
   &-card {
-    align-items: center;
     min-width: 12rem;
     //height: 8rem;
-    padding: 1rem;
     background: var(--noir);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     border: solid dimgrey;
-  }
-
-  &-number {
-    color: white;
-    font-size: 3rem;
   }
 
   &-solution {
     padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-  }
-
-  &-bold {
-    font-weight: bold;
   }
 }
