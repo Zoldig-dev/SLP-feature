@@ -1,8 +1,8 @@
-<header>
+<header class="flex justify-c">
     <div class="container">
         <!-- Nav bar -->
-        <nav class="nav-bar">
-            <a href="#">
+        <nav class="nav-bar flex row justify-sb align-c">
+            <a href="{{ path('home') }}">
                 <h1>
                     <img
                             class="logo_slp"
@@ -12,13 +12,37 @@
                     />
                 </h1>
             </a>
-            <ul class="nav-links">
-                <li><a href="{{ path('home') }}"> <i class="fas fa-home fa-2xl"></i> <h5> ACCUEIL</h5></a></li>
-                <li><a> <i class="fas fa-tasks fa-2xl"></i> <h5> NOS METIERS </h5></a></li>
-                <li><a href="{{ path('slp_easy_gestion') }}"> <i class="fas fa-chart-line fa-2xl"></i> <h5> SLP EASY
-                            GESTION </h5></a></li>
-                <li><a> <i class="fas fa-money-check-alt fa-2xl"></i> <h5> DEMANDE DE DEVIS </h5></a></li>
-                <li><a> <i class="fas fa-address-book fa-2xl"></i> <h5> CONTACT</h5></a></li>
+            <ul class="nav-links flex justify-c align-c">
+                <li>
+                    <a href="{{ path('home') }}">
+                        <i class="fas fa-home fa-2xl"></i>
+                        <h5> ACCUEIL</h5>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-tasks fa-2xl"></i>
+                        <h5> NOS METIERS </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('slp_easy_gestion') }}">
+                        <i class="fas fa-chart-line fa-2xl"></i>
+                        <h5> SLP EASY GESTION </h5>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-money-check-alt fa-2xl"></i>
+                        <h5> DEMANDE DE DEVIS </h5>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <i class="fas fa-address-book fa-2xl"></i>
+                        <h5> CONTACT</h5>
+                    </a>
+                </li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>

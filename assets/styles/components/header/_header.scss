@@ -6,8 +6,6 @@ body {
   }
 
   header {
-    display: flex;
-    justify-content: center;
     background-color: var(--gris);
     position: sticky;
     top: 0;
@@ -15,21 +13,14 @@ body {
     z-index: 10;
 
     .nav-bar {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
       width: 100%;
 
       h1 {
         width: fit-content;
       }
 
-      ul {
+      .nav-links {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
         @include m.mq(tablet) {
           position: absolute;
@@ -37,10 +28,8 @@ body {
           background: var(--gris);
           height: 50vh;
           top: 6.5vh;
-          display: flex;
           flex-direction: column;
           justify-content: space-around !important;
-          align-items: center;
           width: 80%;
           transform: translateX(100%);
           transition: transform 0.5s ease-in;

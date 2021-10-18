@@ -7,7 +7,44 @@
 }
 
 // font
+// ! FONT-SIZE !
+@for $i from 1 through 5 {
+  .size-#{$i} {
+    font-size: 0rem+$i;
+  }
+}
 
+// ! FONT-WEIGHT !
+// bold
+.bold {
+  font-weight: bold;
+}
+// bolder
+.bolder {
+  font-weight: bolder;
+}
+// lighter
+.lighter {
+  font-weight: lighter;
+}
+
+// ! TEXT-TRANSFORM !
+// capitalize
+.capitalize {
+  text-transform: capitalize;
+}
+// uppercase
+.uppercase {
+  text-transform: uppercase;
+}
+// lowercase
+.lowercase {
+  text-transform: lowercase;
+}
+// none
+.transform-none {
+  text-transform: none;
+}
 
 // class variable
 .container {
@@ -140,25 +177,4 @@
 // end
 .end {
   text-align: end;
-}
-
-// ! FONT-SIZE !
-@for $i from 1 through 5 {
-  .size-#{$i} {
-    font-size: 0rem+$i;
-  }
-}
-
-// ! FONT-WEIGHT !
-// bold
-.bold {
-  font-weight: bold;
-}
-// bolder
-.bolder {
-  font-weight: bolder;
-}
-// lighter
-.lighter {
-  font-weight: lighter;
 }

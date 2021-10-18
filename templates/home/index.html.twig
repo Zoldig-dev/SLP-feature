@@ -3,14 +3,14 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    <section class="homeTitle">
+    <section class="homeTitle flex justify-c align-c">
         {% include 'home/home_title.html.twig' %}
     </section>
     {% include 'home/presentation.html.twig' %}
-    <section class="client">
+    <section class="client flex justify-c">
         {% include 'home/clients.html.twig' %}
     </section>
-    <section>
+    <section class="contact flex justify-c align-c">
         {% include 'home/contact.html.twig' %}
     </section>
 {% endblock %}

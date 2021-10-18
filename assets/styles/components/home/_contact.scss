@@ -1,25 +1,21 @@
 @import "assets/styles/variables";
 
 .contact {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-  url("../../../../assets/images/bg-contact.jpg");
-  //width: 100%;
-  justify-content: center;
-  align-items: center;
+  background-image:
+          linear-gradient(
+                  to right,
+                  rgba(0, 0, 0, 0.6),
+                  rgba(0, 0, 0, 0.8)
+          ),
+          url("../../../../assets/images/bg-contact.jpg");
   padding: 4rem 0;
 
   &-title {
-    text-transform: uppercase;
     color: var(--orange);
-    text-align: center;
-    font-size: 3rem;
-    padding-bottom: 2rem;
   }
 
   &-box {
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 5rem;
 
     &_item {
@@ -27,24 +23,17 @@
       height: 32rem;
       background: var(--noir);
       border: 0.5px solid rgba(255, 255, 255, 0.2);
-      justify-content: space-between;
-      align-items: center;
 
       .contactForm {
         gap: 1rem;
-        text-align: center;
-        padding: 2rem;
         color: white;
 
         h3 {
-          text-align: center;
           font-size: 1.5rem;
-          padding-bottom: 2rem;
         }
 
         &-item {
           width: 100%;
-          justify-content: space-between;
 
           input,
           select,
@@ -69,11 +58,11 @@
           width: 100%;
           height: 2rem;
           cursor: pointer;
-          font-weight: bold;
           background: #565656;
           border: none;
           border-radius: .2rem;
           transition: all 0.2s ease-in-out;
+
           &:hover {
             background: #6c6c6c;
           }
@@ -86,12 +75,6 @@
 
       &-description {
         padding: 4rem 2rem;
-
-        h3 {
-          text-transform: uppercase;
-          padding-bottom: 1rem;
-        }
-
         color: white;
       }
     }

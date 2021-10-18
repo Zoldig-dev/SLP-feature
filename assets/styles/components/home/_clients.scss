@@ -1,17 +1,11 @@
 .client{
-  display: flex;
-  justify-content: center;
   background-color: white;
 
   .ils_nous_font_confiance {
     h2{
-      display: flex;
-      justify-content: center;
       margin: 50px 0;
       color:var(--orange);
       text-transform: uppercase;
-      font-size: 3rem;
-      text-align:center;
     }
     .grid {
       display: grid;
@@ -20,9 +14,6 @@
       justify-content: center;
       margin: 0 100px;
       .box_client{
-        padding: 20px;
-        display: flex;
-        justify-content: center;
         border: dimgray solid 1px;
         // a choisir entre le border et le shadow
         /* box-shadow:2px 2px dimgray; */
