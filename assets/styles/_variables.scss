@@ -10,18 +10,107 @@
 
 
 // class variable
-
 .container {
   width: 1140px;
 }
 
-// flex style
+// ! DISPLAY FLEX !
 .flex {
   display: flex;
 }
+// FLEX DIRECTION
+// column
 .column {
   flex-direction: column;
 }
+// row
 .row {
   flex-direction: row;
+}
+// JUSTIFY-CONTENT
+// start
+.justify-s {
+  justify-content: start;
+}
+// end
+.justify-e {
+  justify-content: end;
+}
+// center
+.justify-c {
+  justify-content: center;
+}
+// space-between
+.justify-sb {
+  justify-content: space-between;
+}
+// space-evenly
+.justify-se {
+  justify-content: space-evenly;
+}
+// space-around
+.justify-sa {
+  justify-content: space-around;
+}
+
+// ! PADDING !
+@for $i from 1 through 10 {
+  .p-#{$i} {
+    padding : 0rem+$i;
+  }
+}
+// top
+@for $i from 1 through 10 {
+  .pt-#{$i} {
+    padding-top : 0rem+$i;
+  }
+}
+// bottom
+@for $i from 1 through 10 {
+  .pb-#{$i} {
+    padding-bottom : 0rem+$i;
+  }
+}
+// right
+@for $i from 1 through 10 {
+  .pr-#{$i} {
+    padding-right : 0rem+$i;
+  }
+}
+// left
+@for $i from 1 through 10 {
+  .pl-#{$i} {
+    padding-left : 0rem+$i;
+  }
+}
+
+// ! MARGIN !
+@for $i from 1 through 10 {
+  .m-#{$i} {
+    margin : 0rem+$i;
+  }
+}
+// top
+@for $i from 1 through 10 {
+  .mt-#{$i} {
+    margin-top : 0rem+$i;
+  }
+}
+// bottom
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom : 0rem+$i;
+  }
+}
+// right
+@for $i from 1 through 10 {
+  .r-#{$i} {
+    margin-right : 0rem+$i;
+  }
+}
+// left
+@for $i from 1 through 10 {
+  .ml-#{$i} {
+    margin-left : 0rem+$i;
+  }
 }
