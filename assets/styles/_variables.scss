@@ -7,6 +7,23 @@
 }
 
 // font
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("/assets/styles/fonts/Ubuntu-Regular.ttf");
+}
+@font-face {
+  font-family: 'Open Sans Condense';
+  src: url("/assets/styles/fonts/OpenSansCondensed-Light.ttf");
+}
+@font-face {
+  font-family: 'PTSansNarrow';
+  src: url("/assets/styles/fonts/PTSansNarrow-Regular.ttf");
+}
+@font-face {
+  font-family: 'YanoneKaffeesatz';
+  src: url("/assets/styles/fonts/YanoneKaffeesatz-VariableFont_wght.ttf");
+}
+
 // ! FONT-SIZE !
 @for $i from 1 through 5 {
   .size-#{$i} {

@@ -14,35 +14,40 @@ body {
 
     .nav-bar {
       width: 100%;
+      @include m.mq(tablet) {
+        padding: 0 1rem;
+      }
 
       h1 {
         width: fit-content;
+        display: flex;
       }
 
       .nav-links {
         margin: 0;
 
         @include m.mq(tablet) {
+          padding: 1.5rem 0 1rem 0;
           position: absolute;
           right: 0;
-          background: var(--gris);
-          height: 50vh;
+          background-color: rgba(240,240,240,0.8);
+          height: fit-content;
           top: 6.5vh;
           flex-direction: column;
-          justify-content: space-around !important;
-          width: 80%;
+          justify-content: space-around; //!important;
+          width: 100%;
           transform: translateX(100%);
           transition: transform 0.5s ease-in;
+          gap: 1rem;
         }
 
         li {
           list-style: none;
-          padding: 0 20px;
-          font-family: "Lexend Tera", sans-serif;
+          padding: 0 1rem;
+          //font-family: "Lexend Tera", sans-serif;
+          font-family: Ubuntu, sans-serif;
           font-size: 0.8rem;
           @include m.mq(tablet) {
-            background: var(--orange);
-            padding: 15px !important;;
             opacity: 0;
             width: 80%;
           }
@@ -50,10 +55,13 @@ body {
           a {
             cursor: pointer;
             @include m.mq(tablet) {
+              background: var(--orange);
+              border-radius: 0.5rem;
+              padding: 0.5rem 2rem;
               display: flex;
               justify-content: space-between;
               align-items: center;
-              text-decoration: none !important;
+              text-decoration: none //!important;
             }
 
             h5 {
@@ -62,7 +70,7 @@ body {
               position: relative;
               color: var(--noir);
               @include m.mq(tablet) {
-                color: var(--gris) !important;
+                color: var(--gris); //!important;
               }
 
               &:after {
@@ -86,10 +94,8 @@ body {
             i {
               display: none;
               @include m.mq(tablet) {
-                display: block !important;
+                display: block; //!important;
                 color: var(--gris);
-
-
               }
             }
           }
@@ -100,10 +106,9 @@ body {
         display: none;
         transition: all 0.3s ease;
         @include m.mq(tablet) {
-          display: block !important;
+          display: block; //!important;
           cursor: pointer;
         }
-
 
         .line1 {
           width: 25px;
