@@ -7,6 +7,7 @@
 /public/bundles/
 /var/
 /vendor/
+/.idea/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
@@ -15,8 +16,8 @@
 ###< symfony/phpunit-bridge ###
 
 ###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
+#/phpunit.xml
+#.phpunit.result.cache
 ###< phpunit/phpunit ###
 
 ###> symfony/webpack-encore-bundle ###
