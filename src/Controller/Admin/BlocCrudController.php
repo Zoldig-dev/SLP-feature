@@ -6,6 +6,7 @@ use App\Entity\Bloc;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
@@ -33,8 +34,12 @@ class BlocCrudController extends AbstractCrudController
     {
         return [
             TextareaField::new('content')
-                ->setLabel('editor')
+                ->setLabel('Content')
                 ->setFormType(CKEditorType::class),
+
+            IdField::new('orderList')
+                ->setLabel('The Order List'),
+
         ];
     }
 }
