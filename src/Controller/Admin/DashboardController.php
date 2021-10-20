@@ -41,4 +41,5 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Slider', 'fas fa-camera',Slider::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
+
 }

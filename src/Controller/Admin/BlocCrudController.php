@@ -3,23 +3,38 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Bloc;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class BlocCrudController extends AbstractCrudController
 {
+    public function configureAssets(Assets $assets): Assets
+    {
+        return $assets
+            ->addJsFile('build/script.js');
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
+            ;
+    }
+
     public static function getEntityFqcn(): string
     {
         return Bloc::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextareaField::new('content')
+                ->setLabel('editor')
+                ->setFormType(CKEditorType::class),
         ];
     }
-    */
 }
