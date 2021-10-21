@@ -3,15 +3,17 @@
 {% block title %}Nos Métiers{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1> {{ metiers[0].title }}</h1>
+    <section class="metiers flex column justify-c align-c">
+        <h1 class="size-3 center uppercase pt-2 pb-2"> {{ metiers[0].title }}</h1>
 
         {% for bloc in blocs %}
-            <div>
-                {{ bloc.content | raw }}
+            <div class="container">
+                <div class="metier">
+                    {{ bloc.content | raw }}
+                </div>
             </div>
         {% endfor %}
 
         <a href="{{ metiers[0].link }}">un truc</a>
-    </div>
+    </section>
 {% endblock %}

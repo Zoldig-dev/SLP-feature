@@ -15,7 +15,8 @@ class BlocCrudController extends AbstractCrudController
     public function configureAssets(Assets $assets): Assets
     {
         return $assets
-            ->addJsFile('build/script.js');
+            ->addJsFile('build/script.js')
+            ->addCssFile('build/style.css');
     }
 
     public function configureCrud(Crud $crud): Crud
@@ -33,8 +34,7 @@ class BlocCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextareaField::new('content')
-                ->setLabel('Content')
+            TextareaField::new('content', "Contenue d'un métier")
                 ->setFormType(CKEditorType::class),
 
             IdField::new('orderList')
