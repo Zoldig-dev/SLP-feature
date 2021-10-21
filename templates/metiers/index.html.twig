@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Métiers{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1> {{ metiers[0].title }}</h1>
+
+        {% for bloc in blocs %}
+            <div>
+                {{ bloc.content | raw }}
+            </div>
+        {% endfor %}
+
+        <a href="{{ metiers[0].link }}">un truc</a>
+    </div>
+{% endblock %}
