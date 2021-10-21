@@ -65,8 +65,8 @@ class BlocCrudController extends AbstractCrudController
             IdField::new('orderList')
                 ->setLabel('The Order List'),
 
-            ChoiceField::new('pageCustom')
-                ->setChoices(array($title)),
+//            ChoiceField::new('pageCustom')
+//                ->setChoices(array($title)),
         ];
     }
 }

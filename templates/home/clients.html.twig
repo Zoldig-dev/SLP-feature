@@ -3,9 +3,8 @@
         <h2 class="size-3 center">Ils Nous Font Confiance </h2>
         <div class="grid">
             {% for client in clients %}
-
                 <div class="box_client p-1 flex justify-c align-c">
-                    <img class="logo_client" src="{{ client.link }}" width="100px" alt="logo_client">
+                    <img class="logo_client" src="{{ asset('build/images/'~ client.link) }}" width="100px" alt="logo_client">
                 </div>
             {% endfor %}
         </div>
