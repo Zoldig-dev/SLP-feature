@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" lang="fr">
+    <meta name="description" content="Site de SLP">
+    <meta name="keywords" content="SLP, Logistique, Signalétique, Colisage, Transport">
+    <meta name="author" content="Horler Raphael, Bourgin Yves, Neffeti Mahmoud">
     <title>{% block title %}hello!{% endblock %}</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('style') }}
     {% endblock %}
-
 </head>
 <body>
 {% block header %}{% include 'header/header.html.twig' %}{% endblock %}

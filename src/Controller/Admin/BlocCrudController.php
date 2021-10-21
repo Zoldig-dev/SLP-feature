@@ -9,9 +9,12 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class BlocCrudController extends AbstractCrudController
 {
@@ -64,9 +67,6 @@ class BlocCrudController extends AbstractCrudController
 
             IdField::new('orderList')
                 ->setLabel('The Order List'),
-
-//            ChoiceField::new('pageCustom')
-//                ->setChoices(array($title)),
         ];
     }
 }
