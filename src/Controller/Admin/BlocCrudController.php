@@ -3,15 +3,32 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Bloc;
+use App\Entity\PageCustom;
+use App\Repository\PageCustomRepository;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class BlocCrudController extends AbstractCrudController
 {
+    /**
+     * @var PageCustomRepository
+     */
+    private $pagesRepo;
+
+    /**
+     * @param PageCustomRepository $pagesRepo
+     */
+    public function __construct(PageCustomRepository $pagesRepo)
+    {
+        $this->pagesRepo = $pagesRepo;
+    }
+
+
     public function configureAssets(Assets $assets): Assets
     {
         return $assets
@@ -33,6 +50,14 @@ class BlocCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
+        $pages = $this->pagesRepo->findAll();
+        $title = [];
+        foreach ($pages as $page) {
+            $title[] = $page->getTitle();
+        }
+        $title = array_flip($title);
+//        dd($title);
+
         return [
             TextareaField::new('content', "Contenue d'un métier")
                 ->setFormType(CKEditorType::class),
@@ -40,6 +65,8 @@ class BlocCrudController extends AbstractCrudController
             IdField::new('orderList')
                 ->setLabel('The Order List'),
 
+            ChoiceField::new('pageCustom')
+                ->setChoices(array($title)),
         ];
     }
 }

@@ -33,7 +33,8 @@ class MetiersController extends AbstractController
     public function index(): Response
     {
         $pageCustom = $this->pageRepo->findAll();
-        $blocs = $this->blocRepo->findAll();
+        $blocsL = $this->blocRepo->findBy(array('pageCustom' => 'logistique'));
+
 
         return $this->render('metiers/index.html.twig', [
             'controller_name' => 'MetiersController',

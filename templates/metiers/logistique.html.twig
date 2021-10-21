@@ -1,0 +1,9 @@
+{% for bloc in blocs %}
+    <div class="metier flex column justify-c align-c m-5">
+        <div class="container">
+            <div class="metier-box p-2 mb-2">
+                {{ bloc.content | raw }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
