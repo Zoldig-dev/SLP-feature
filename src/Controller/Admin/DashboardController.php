@@ -36,13 +36,13 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::section('Accueil', 'fa fa-minus');
+//        yield MenuItem::section('Accueil', 'fa fa-minus');
         yield MenuItem::subMenu('Page Accueil', 'fa fa-cog')->setSubItems([
             MenuItem::linkToCrud('Number key', 'far fa-chart-bar',HomePageNumberKey::class),
             MenuItem::linkToCrud('All Clients', 'far fa-address-card',HomePageClient::class)
         ]);
 
-        yield MenuItem::section('Métiers', 'fa fa-minus');
+//        yield MenuItem::section('Métiers', 'fa fa-minus');
         yield MenuItem::subMenu('Page Métiers', 'fa fa-cog')->setSubItems([
             MenuItem::linkToCrud('Page Custom', 'fas fa-sliders-h',PageCustom::class),
             MenuItem::linkToCrud('Bloc', 'fas fa-puzzle-piece',Bloc::class)

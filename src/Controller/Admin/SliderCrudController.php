@@ -6,9 +6,7 @@ use App\Entity\Slider;
 use App\Form\SliderImagesType;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class SliderCrudController extends AbstractCrudController
 {
@@ -23,6 +21,7 @@ class SliderCrudController extends AbstractCrudController
             TextField::new('name'),
             CollectionField::new('images')
                 ->setEntryType(SliderImagesType::class)
+                ->onlyOnForms(),
         ];
     }
 }

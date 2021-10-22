@@ -12,6 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -62,9 +63,7 @@ class BlocCrudController extends AbstractCrudController
 //        dd($title);
 
         return [
-            TextareaField::new('content', "Contenue d'un métier")
-                ->setFormType(CKEditorType::class),
-
+            TextEditorField::new('content', "Contenue d'un métier"),
             IdField::new('orderList')
                 ->setLabel('The Order List'),
         ];

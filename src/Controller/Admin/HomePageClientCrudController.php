@@ -18,8 +18,9 @@ class HomePageClientCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
-            ImageField::new('link')
-                ->setUploadDir('assets/images')
+            TextField::new('link'),
+//            ImageField::new('images')
+//                ->setUploadDir('assets/images')
         ];
     }
 }
