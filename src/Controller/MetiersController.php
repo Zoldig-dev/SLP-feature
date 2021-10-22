@@ -39,7 +39,7 @@ class MetiersController extends AbstractController
         return $this->render('metiers/index.html.twig', [
             'controller_name' => 'MetiersController',
             'metiers' => $pageCustom,
-            'blocs' => $blocs,
+            'blocs' => $blocsL,
         ]);
     }
 }
