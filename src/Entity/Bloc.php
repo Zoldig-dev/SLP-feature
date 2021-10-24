@@ -18,19 +18,24 @@ class Bloc
     private $id;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $content;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $orderList;
 
     /**
      * @ORM\ManyToOne(targetEntity=PageCustom::class, inversedBy="bloc")
      */
     private $pageCustom;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isImage;
 
     public function getId(): ?int
     {
@@ -49,18 +54,6 @@ class Bloc
         return $this;
     }
 
-    public function getOrderList(): ?int
-    {
-        return $this->orderList;
-    }
-
-    public function setOrderList(int $orderList): self
-    {
-        $this->orderList = $orderList;
-
-        return $this;
-    }
-
     public function getPageCustom(): ?PageCustom
     {
         return $this->pageCustom;
@@ -73,8 +66,27 @@ class Bloc
         return $this;
     }
 
-    public function __toString(): string
+    public function getName(): ?string
     {
-        return $this->id;
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getIsImage(): ?bool
+    {
+        return $this->isImage;
+    }
+
+    public function setIsImage(bool $isImage): self
+    {
+        $this->isImage = $isImage;
+
+        return $this;
     }
 }
