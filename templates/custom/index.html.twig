@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ImageController!{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+
+        {% for custom in customs %}
+
+            <h3 class="card-title">{{ custom.id }}</h3>
+            <h3 class="card-title">{{ custom.name }}</h3>
+            <h3 class="card-title">{{ custom.website }}</h3>
+            <img src="{{ vich_uploader_asset(custom) }}" alt="{{ custom.name }}" width="100px">
+
+            <h3>{{ custom.path }}</h3>
+
+        {% endfor %}
+    </section>
+{% endblock %}

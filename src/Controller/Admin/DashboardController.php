@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Bloc;
+use App\Entity\Custom;
 use App\Entity\HomePageClient;
 use App\Entity\HomePageNumberKey;
 use App\Entity\PageCustom;
@@ -37,6 +38,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
 
+        yield MenuItem::linkToCrud('Custom', 'fa fa-cog', Custom::class);
         yield MenuItem::linkToCrud('Number key', 'fa fa-cog', HomePageNumberKey::class);
         yield MenuItem::linkToCrud('Page client', 'far fa-copy', HomePageClient::class);
         yield MenuItem::linkToCrud('Page Custom', 'fas fa-sliders-h', PageCustom::class);
