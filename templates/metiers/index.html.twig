@@ -3,28 +3,17 @@
 {% block title %}Nos Métiers{% endblock %}
 
 {% block body %}
-    <div class="metiers flex column justify-c align-c">
-        <h1 class="size-3 center uppercase pt-2 pb-2"> {{ metiers[0].title }}</h1>
+    <div class="container flex justify-c">
+        <div class="metiers flex column justify-c align-c">
 
-        <section class="logistique" id="logistique">
-            {% include 'metiers/logistique.html.twig' %}
-        </section>
-        <section class="signaletique">
-            {% include 'metiers/signaletique.html.twig' %}
-        </section>
-        <section class="colisage">
-            {% include 'metiers/colisage.html.twig' %}
-        </section>
-        <section class="ecommerce">
-            {% include 'metiers/ecommerce.html.twig' %}
-        </section>
-        <section class="approvisionnement">
-            {% include 'metiers/approvisionnement.html.twig' %}
-        </section>
-        <section class="transport">
-            {% include 'metiers/transport.html.twig' %}
-        </section>
+            {% for metier in metiers %}
+                <h2> {{ metier.name }} </h2>
+                <div class="metier_bloc flex row justify-se">
+                    <div> {{ metier.content }}</div>
+                    <img src="{{ vich_uploader_asset(metier) }}" alt="" width="100%">
+                </div>
+            {% endfor %}
 
-        <a href="{{ metiers[0].link }}">un truc</a>
+        </div>
     </div>
 {% endblock %}

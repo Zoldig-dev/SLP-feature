@@ -3,8 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Bloc;
-use App\Entity\Custom;
-use App\Entity\HomePageClient;
+use App\Entity\Clients;
 use App\Entity\HomePageNumberKey;
 use App\Entity\PageCustom;
 use App\Entity\Slider;
@@ -21,7 +20,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         $routeBuilder = $this->get(AdminUrlGenerator::class);
-        $url = $routeBuilder->setController(HomePageClientCrudController::class)->generateUrl();
+        $url = $routeBuilder->setController(ClientsCrudController::class)->generateUrl();
 
         return $this->redirect($url);
     }
@@ -38,9 +37,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
 
-        yield MenuItem::linkToCrud('Custom', 'fa fa-cog', Custom::class);
+        yield MenuItem::linkToCrud('Clients', 'fas fa-users', Clients::class);
         yield MenuItem::linkToCrud('Number key', 'fa fa-cog', HomePageNumberKey::class);
-        yield MenuItem::linkToCrud('Page client', 'far fa-copy', HomePageClient::class);
         yield MenuItem::linkToCrud('Page Custom', 'fas fa-sliders-h', PageCustom::class);
         yield MenuItem::linkToCrud('Bloc', 'fas fa-puzzle-piece', Bloc::class);
         yield MenuItem::linkToCrud('Slider', 'fas fa-camera', Slider::class);

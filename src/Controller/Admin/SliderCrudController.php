@@ -24,7 +24,7 @@ class SliderCrudController extends AbstractCrudController
             TextField::new('name'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
-            ImageField::new('name')->setBasePath('/uploads/images/')->onlyOnIndex(),
+            ImageField::new('name')->setBasePath('/uploads/images/slider')->onlyOnIndex(),
 //            SlugField::new('slug')->setTargetFieldName('name'),
         ];
     }

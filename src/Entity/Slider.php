@@ -27,22 +27,11 @@ class Slider
      */
     private $name;
 
-
     /**
-     * @Vich\UploadableField(mapping="Custom_image", fileNameProperty="name")
+     * @Vich\UploadableField(mapping="Slider_image", fileNameProperty="name")
      * @var File|null
      */
     private $imageFile;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="slider")
-     */
-    private $images;
-
-    public function __construct()
-    {
-        $this->images = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -54,42 +43,13 @@ class Slider
         return $this->name;
     }
 
-    public function setName(string $name): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
 
         return $this;
     }
 
-    /**
-     * @return Collection|Image[]
-     */
-    public function getImages(): Collection
-    {
-        return $this->images;
-    }
-
-    public function addImage(Image $image): self
-    {
-        if (!$this->images->contains($image)) {
-            $this->images[] = $image;
-            $image->setSlider($this);
-        }
-
-        return $this;
-    }
-
-    public function removeImage(Image $image): self
-    {
-        if ($this->images->removeElement($image)) {
-            // set the owning side to null (unless already changed)
-            if ($image->getSlider() === $this) {
-                $image->setSlider(null);
-            }
-        }
-
-        return $this;
-    }
     public function setImageFile(?File $imageFile = null): void
     {
         $this->imageFile = $imageFile;

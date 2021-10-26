@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\BlocRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @Vich\Uploadable
  * @ORM\Entity(repositoryClass=BlocRepository::class)
  */
 class Bloc
@@ -23,6 +26,12 @@ class Bloc
     private $content;
 
     /**
+     * @Vich\UploadableField(mapping="Bloc_image", fileNameProperty="path")
+     * @var File|null
+     */
+    private $imageFile;
+
+    /**
      * @ORM\ManyToOne(targetEntity=PageCustom::class, inversedBy="bloc")
      */
     private $pageCustom;
@@ -32,10 +41,11 @@ class Bloc
      */
     private $name;
 
+
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $isImage;
+    private $path;
 
     public function getId(): ?int
     {
@@ -52,6 +62,16 @@ class Bloc
         $this->content = $content;
 
         return $this;
+    }
+
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
     }
 
     public function getPageCustom(): ?PageCustom
@@ -78,14 +98,14 @@ class Bloc
         return $this;
     }
 
-    public function getIsImage(): ?bool
+    public function getPath(): ?string
     {
-        return $this->isImage;
+        return $this->path;
     }
 
-    public function setIsImage(bool $isImage): self
+    public function setPath(?string $path): self
     {
-        $this->isImage = $isImage;
+        $this->path = $path;
 
         return $this;
     }

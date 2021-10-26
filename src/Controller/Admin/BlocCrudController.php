@@ -11,11 +11,14 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class BlocCrudController extends AbstractCrudController
 {
@@ -63,9 +66,13 @@ class BlocCrudController extends AbstractCrudController
 //        dd($title);
 
         return [
-            TextEditorField::new('content', "Contenue d'un métier"),
-            IdField::new('orderList')
-                ->setLabel('The Order List'),
+
+            TextField::new('name'),
+            TextareaField::new('content'),
+            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            ImageField::new('path')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+
         ];
     }
 }

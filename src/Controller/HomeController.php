@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactFormType;
-use App\Repository\HomePageClientRepository;
+use App\Repository\ClientsRepository;
 use App\Repository\HomePageNumberKeyRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,32 +25,21 @@ class HomeController extends AbstractController
     private $numberKeyRepository;
 
     /**
-     * @var HomePageClientRepository
-     */
-    private $clientRepository;
-
-    /**
      * @param EntityManagerInterface $em
      * @param HomePageNumberKeyRepository $numberKeyRepository
-     * @param HomePageClientRepository $clientRepository
+     * @param ClientsRepository $clientsRepository
      */
-    public function __construct(EntityManagerInterface $em, HomePageNumberKeyRepository $numberKeyRepository, HomePageClientRepository $clientRepository)
+    public function __construct(EntityManagerInterface $em, HomePageNumberKeyRepository $numberKeyRepository, ClientsRepository $clientsRepository)
     {
         $this->em = $em;
         $this->numberKeyRepository = $numberKeyRepository;
-        $this->clientRepository = $clientRepository;
+        $this->clientsRepository = $clientsRepository;
     }
-
-    /**
-     * @param EntityManagerInterface $em
-     * @param HomePageNumberKeyRepository $numberKeyRepository
-     */
-
 
     /**
      * @Route("/home", name="home")
      */
-    public function index(Request $request): Response
+    public function index(Request $request, ClientsRepository $clientsRepository): Response
     {
 
         $contact= new Contact();
@@ -64,14 +53,16 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-        $clients = $this->clientRepository->findAll();
         $numbers=$this->numberKeyRepository->findAll();
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'form' => $form->createView(),
             'numberKeys' => $numbers,
-            'clients' => $clients
+            'clients' => $clientsRepository->findAll(),
         ]);
     }
+
+
+
 }

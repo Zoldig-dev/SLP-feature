@@ -2,22 +2,19 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Custom;
+use App\Entity\Clients;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
-class CustomCrudController extends AbstractCrudController
+class ClientsCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Custom::class;
+        return Clients::class;
     }
-
     public function configureFields(string $pageName): iterable
     {
         return [
@@ -25,11 +22,10 @@ class CustomCrudController extends AbstractCrudController
             TextField::new('website'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
-            ImageField::new('path')->setBasePath('/uploads/images/')->onlyOnIndex(),
+            ImageField::new('path')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
             SlugField::new('slug')->setTargetFieldName('name'),
 
         ];
 
     }
-
 }

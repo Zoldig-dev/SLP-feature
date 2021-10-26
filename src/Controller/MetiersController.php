@@ -30,16 +30,18 @@ class MetiersController extends AbstractController
     }
 
     #[Route('/metiers', name: 'metiers')]
-    public function index(): Response
+
+    public function index(BlocRepository $blocRepo): Response
     {
-        $pageCustom = $this->pageRepo->findAll();
-        $blocsL = $this->blocRepo->findBy(array('pageCustom' => 'logistique'));
+//        $pageCustom = $this->pageRepo->findAll();
+
 
 
         return $this->render('metiers/index.html.twig', [
             'controller_name' => 'MetiersController',
-            'metiers' => $pageCustom,
-            'blocs' => $blocsL,
+            'metiers' => $blocRepo->findAll(),
+
         ]);
     }
+
 }

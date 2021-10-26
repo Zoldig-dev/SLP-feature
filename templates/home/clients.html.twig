@@ -4,7 +4,10 @@
         <div class="grid">
             {% for client in clients %}
                 <div class="box_client p-1 flex justify-c align-c">
-                    <img class="logo_client" src="{{ asset('build/images/'~ client.link) }}" width="100px" alt="logo_client">
+                    <a href="{{ client.website }}">
+                        <img class="logo_client" src="{{ vich_uploader_asset(client) }}"
+                             alt="{{ client.name }}" width="100px">
+                    </a>
                 </div>
             {% endfor %}
         </div>

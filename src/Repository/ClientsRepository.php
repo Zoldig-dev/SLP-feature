@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Custom;
+use App\Entity\Clients;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Custom|null find($id, $lockMode = null, $lockVersion = null)
- * @method Custom|null findOneBy(array $criteria, array $orderBy = null)
- * @method Custom[]    findAll()
- * @method Custom[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Clients|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Clients|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Clients[]    findAll()
+ * @method Clients[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class CustomRepository extends ServiceEntityRepository
+class ClientsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Custom::class);
+        parent::__construct($registry, Clients::class);
     }
 
     // /**
-    //  * @return Custom[] Returns an array of Custom objects
+    //  * @return Clients[] Returns an array of Clients objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class CustomRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Custom
+    public function findOneBySomeField($value): ?Clients
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')
