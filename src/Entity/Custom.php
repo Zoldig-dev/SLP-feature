@@ -74,7 +74,7 @@ class Custom
         return $this->path;
     }
 
-    public function setPath(string $path): self
+    public function setPath(?string $path): self
     {
         $this->path = $path;
 
@@ -125,5 +125,8 @@ class Custom
         $this->slug = $slug;
 
         return $this;
+    }
+    public function __toString(){
+        return $this->path;
     }
 }

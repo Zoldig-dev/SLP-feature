@@ -1,11 +1,15 @@
 <!-- Slider main container -->
+
+<!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
-        <div class="swiper-slide"><img src="{{ asset('build/images/SLP-adress.PNG') }}" alt="" width="100%"></div>
-        <div class="swiper-slide"><img src="{{ asset('build/images/bg-presentation.jpg') }}" alt="" width="100%"></div>
-        <div class="swiper-slide"><img src="{{ asset('build/images/bg-homeTitleSection.jpg') }}" alt="" width="100%"></div>
+
+        {% for slide in slides %}
+            <div class="swiper-slide"><img src="{{ vich_uploader_asset(slide) }}" alt="" width="100%"></div>
+        {% endfor %}
+
     </div>
 
     <!-- If we need navigation buttons -->

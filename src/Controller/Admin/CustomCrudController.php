@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Custom;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
@@ -23,10 +24,11 @@ class CustomCrudController extends AbstractCrudController
             TextField::new('name'),
             TextField::new('website'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path')->setBasePath('/uploads/images/')->onlyOnIndex(),
             SlugField::new('slug')->setTargetFieldName('name'),
-        ];
 
+        ];
 
     }
 
