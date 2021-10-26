@@ -39,7 +39,6 @@ class DashboardController extends AbstractDashboardController
 
         yield MenuItem::linkToCrud('Clients', 'fas fa-users', Clients::class);
         yield MenuItem::linkToCrud('Number key', 'fa fa-cog', HomePageNumberKey::class);
-        yield MenuItem::linkToCrud('Page Custom', 'fas fa-sliders-h', PageCustom::class);
         yield MenuItem::linkToCrud('Bloc', 'fas fa-puzzle-piece', Bloc::class);
         yield MenuItem::linkToCrud('Slider', 'fas fa-camera', Slider::class);
 

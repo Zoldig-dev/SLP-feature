@@ -32,11 +32,6 @@ class Bloc
     private $imageFile;
 
     /**
-     * @ORM\ManyToOne(targetEntity=PageCustom::class, inversedBy="bloc")
-     */
-    private $pageCustom;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
@@ -72,18 +67,6 @@ class Bloc
     public function getImageFile(): ?File
     {
         return $this->imageFile;
-    }
-
-    public function getPageCustom(): ?PageCustom
-    {
-        return $this->pageCustom;
-    }
-
-    public function setPageCustom(?PageCustom $pageCustom): self
-    {
-        $this->pageCustom = $pageCustom;
-
-        return $this;
     }
 
     public function getName(): ?string
