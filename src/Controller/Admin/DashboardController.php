@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\Bloc;
 use App\Entity\Clients;
 use App\Entity\HomePageNumberKey;
-use App\Entity\PageCustom;
 use App\Entity\Slider;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -37,10 +36,20 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
 
+
         yield MenuItem::linkToCrud('Clients', 'fas fa-users', Clients::class);
         yield MenuItem::linkToCrud('Chiffre clés', 'fa fa-cog', HomePageNumberKey::class);
         yield MenuItem::linkToCrud('Métiers', 'fas fa-puzzle-piece', Bloc::class);
         yield MenuItem::linkToCrud('Slider', 'fas fa-camera', Slider::class);
+
+        yield MenuItem::section('Accueil', 'fa fa-minus');
+        yield MenuItem::linkToCrud('Nos chiffres importants', 'fa fa-cog', HomePageNumberKey::class);
+        yield MenuItem::linkToCrud('Nos clients', 'fas fa-users', Clients::class);
+        yield MenuItem::section('Metiers', 'fa fa-minus');
+        yield MenuItem::linkToCrud('Mes pages métiers', 'fas fa-puzzle-piece', Bloc::class);
+        yield MenuItem::section('Autres', 'fa fa-minus');
+        yield MenuItem::linkToCrud('Mes Sliders', 'fas fa-camera', Slider::class);
+
 
     }
 

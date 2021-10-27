@@ -15,8 +15,6 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class BlocCrudController extends AbstractCrudController
 {
-
-
     public function configureAssets(Assets $assets): Assets
     {
         return $assets
@@ -27,7 +25,8 @@ class BlocCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->addFormTheme('@FOSCKEditor/Form/ckeditor_widget.html.twig')
+            ->setEntityLabelInSingular('une page métier')
+            ->setEntityLabelInPlural('Mes pages métiers')
             ;
     }
 

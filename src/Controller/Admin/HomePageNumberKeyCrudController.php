@@ -3,7 +3,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\HomePageNumberKey;
+
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
@@ -16,9 +18,27 @@ class HomePageNumberKeyCrudController extends AbstractCrudController
     {
         return HomePageNumberKey::class;
     }
+
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInPlural('Nos chiffres importants')
+            ->setEntityLabelInSingular('nos chiffres importants')
+            ;
+    }
+
+    public function configureActions(Actions $actions): Actions
+    {
+        return $actions
+            ->disable('new')
+            ->disable('delete')
+            ;
+    }
+
+
     public function configureFields(string $pageName): iterable
     {
-
         return [
 
             NumberField::new('productNumber',label: 'Produits Référencés'),
@@ -30,11 +50,14 @@ class HomePageNumberKeyCrudController extends AbstractCrudController
 
 
 
-    public function configureActions(Actions $actions): Actions
-    {
-        return $actions
-            ->remove(Crud::PAGE_INDEX, Action::NEW)
-            ->remove(Crud::PAGE_INDEX, Action::DELETE)
-            ;
-    }
+//    public function configureActions(Actions $actions): Actions
+//    {
+//        return $actions
+//            ->remove(Crud::PAGE_INDEX, Action::NEW)
+//            ->remove(Crud::PAGE_INDEX, Action::DELETE);
+//
+//        ];
+//
+//    }
 }
+

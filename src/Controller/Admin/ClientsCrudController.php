@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Clients;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
@@ -15,16 +16,28 @@ class ClientsCrudController extends AbstractCrudController
     {
         return Clients::class;
     }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('nos clients')
+            ->setEntityLabelInPlural('Nos clients')
+            ;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
+
             TextField::new('name', label: 'Marque'),
             TextField::new('website', label: 'Site web'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path', label: 'logo')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
             // A voir si on supprime cette ligne ou pas
-//            SlugField::new('slug')->setTargetFieldName('name'),
+            //SlugField::new('slug')->setTargetFieldName('name'),
+
+
 
         ];
 
