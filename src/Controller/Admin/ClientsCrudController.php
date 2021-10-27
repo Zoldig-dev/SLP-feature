@@ -18,12 +18,13 @@ class ClientsCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            TextField::new('website'),
+            TextField::new('name', label: 'Marque'),
+            TextField::new('website', label: 'Site web'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
-            ImageField::new('path')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
-            SlugField::new('slug')->setTargetFieldName('name'),
+            ImageField::new('path', label: 'logo')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
+            // A voir si on supprime cette ligne ou pas
+//            SlugField::new('slug')->setTargetFieldName('name'),
 
         ];
 
