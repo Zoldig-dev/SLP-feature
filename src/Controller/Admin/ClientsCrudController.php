@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Clients;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
@@ -15,13 +16,22 @@ class ClientsCrudController extends AbstractCrudController
     {
         return Clients::class;
     }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->setEntityLabelInSingular('nos clients')
+            ->setEntityLabelInPlural('Nos clients')
+            ;
+    }
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name'),
-            TextField::new('website'),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('name', 'Nom du client'),
+            TextField::new('website', 'Son site internet'),
+            TextField::new('imageFile', 'Son logo')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile', 'Son logo')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
             SlugField::new('slug')->setTargetFieldName('name'),
 
