@@ -7,9 +7,9 @@
         <div class="metiers flex column justify-c align-c">
 
             {% for metier in metiers %}
-                <h2> {{ metier.name }} </h2>
+                <h2 style=""> {{ metier.name }} </h2>
                 <div class="metier_bloc flex row justify-se">
-                    <div> {{ metier.content }}</div>
+                    <p> {{ metier.content }}</p>
                     <img src="{{ vich_uploader_asset(metier) }}" alt="" width="100%">
                 </div>
             {% endfor %}
