@@ -11,7 +11,7 @@ class CguController extends AbstractController
     #[Route('/cgu', name: 'cgu')]
     public function index(): Response
     {
-        return $this->render('cgu/index.html.twig', [
+        return $this->render('cgu/cgu.html.twig', [
             'controller_name' => 'CguController',
         ]);
     }
