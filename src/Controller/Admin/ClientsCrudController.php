@@ -37,8 +37,6 @@ class ClientsCrudController extends AbstractCrudController
             // A voir si on supprime cette ligne ou pas
             //SlugField::new('slug')->setTargetFieldName('name'),
 
-
-
         ];
 
     }
