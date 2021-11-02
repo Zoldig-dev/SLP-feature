@@ -1,10 +1,11 @@
 <nav class="nav-metier">
   {% for metier in metiers %}
     <a 
-      class="nav-metier_item"
+      class="nav-metier_item center"
       href="#{{ metier.name }}"
     >
     {{ metier.name }}
+    <img src="{{ metier.path }}" alt="{{ metier.description }}">
     </a>
   {% endfor %}
 </nav>

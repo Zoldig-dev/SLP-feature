@@ -1,3 +1,5 @@
+@use "../../media-queries" as m;
+
 // nav metiers
 .nav-metier {
   display: flex;
@@ -6,6 +8,18 @@
   gap: 1rem;
   margin-bottom: 2rem;
   background-color: var(--gris);
+
+  @include m.mq(large) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+
+    .nav-metier_item {
+      width: 80%;
+      height: 5rem;
+    }
+  }
 
   &_item {
     padding: 1rem 3rem;

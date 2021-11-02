@@ -13,6 +13,10 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class BlocCrudController extends AbstractCrudController
 {
+    public static function getEntityFqcn(): string
+    {
+        return Bloc::class;
+    }
  
     public function configureAssets(Assets $assets): Assets
     {
@@ -29,10 +33,7 @@ class BlocCrudController extends AbstractCrudController
             ;
     }
 
-    public static function getEntityFqcn(): string
-    {
-        return Bloc::class;
-    }
+    
 
     public function configureFields(string $pageName): iterable
     {
@@ -61,10 +62,22 @@ class BlocCrudController extends AbstractCrudController
 
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+
+            TextField::new('description')->onlyWhenCreating(),
+            TextField::new('description')->onlyWhenUpdating(),
+
             TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+
+            TextField::new('description2')->onlyWhenCreating(),
+            TextField::new('description2')->onlyWhenUpdating(),
+
             ImageField::new('path')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
             ImageField::new('path2')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+            ImageField::new('backgroud')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+
+            TextField::new('imageFile3')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile3')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
         ];
     }
