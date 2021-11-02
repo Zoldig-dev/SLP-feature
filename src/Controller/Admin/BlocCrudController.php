@@ -13,6 +13,7 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class BlocCrudController extends AbstractCrudController
 {
+ 
     public function configureAssets(Assets $assets): Assets
     {
         return $assets
@@ -37,13 +38,11 @@ class BlocCrudController extends AbstractCrudController
     {
 
         return [
-
             TextField::new('name'),
             TextEditorField::new('content'),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
-
         ];
     }
 }

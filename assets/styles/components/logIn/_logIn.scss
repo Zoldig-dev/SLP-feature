@@ -1,0 +1,46 @@
+.bg-log {
+  background-color: var(--noir);
+  height: 80vh;
+  .login {
+    background: var(--gris);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    width: 80%;
+    min-height: 20rem;
+    h1 {
+      color: var(--orange);
+    }
+    &-group {
+      width: 100%;
+      label {
+        color: var(--orange);
+        width: 20%;
+      }
+      input {
+        width: 80%;
+        border-radius: 10px;
+        border: 1px solid var(--orange);
+        padding: 0.5rem;
+        &:focus {
+          outline: none;
+          border: 1px solid var(--orange);
+        }
+      }
+    }
+    &-btn {
+      cursor: pointer;
+      background: #565656;
+      border: none;
+      border-radius: 10px;
+      transition: all 0.2s ease-in-out;
+      padding: 0.5rem 3rem;
+      color: white;
+
+      &:hover {
+        background: #6c6c6c;
+      }
+    }
+  }
+}
