@@ -1,0 +1,10 @@
+<nav class="nav-metier">
+  {% for metier in metiers %}
+    <a 
+      class="nav-metier_item"
+      href="#{{ metier.name }}"
+    >
+    {{ metier.name }}
+    </a>
+  {% endfor %}
+</nav>

@@ -1,0 +1,24 @@
+// nav metiers
+.nav-metier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--gris);
+
+  &_item {
+    padding: 1rem 3rem;
+    background-color: var(--gris);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.83em;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--orange);
+    }
+  }
+}

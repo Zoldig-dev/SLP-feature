@@ -38,11 +38,34 @@ class BlocCrudController extends AbstractCrudController
     {
 
         return [
-            TextField::new('name'),
-            TextEditorField::new('content'),
+            TextField::new('name', 'Libéllé du metier'),
+            
+            TextEditorField::new('content')->onlyWhenCreating(),
+            TextEditorField::new('content')->onlyWhenUpdating(),
+
+            TextEditorField::new('content2')->onlyWhenCreating(),
+            TextEditorField::new('content2')->onlyWhenUpdating(),
+
+            TextEditorField::new('content3')->onlyWhenCreating(),
+            TextEditorField::new('content3')->onlyWhenUpdating(),
+
+            TextEditorField::new('content4')->onlyWhenCreating(),
+            TextEditorField::new('content4')->onlyWhenUpdating(),
+
+            TextEditorField::new('content5')->onlyWhenCreating(),
+            TextEditorField::new('content5')->onlyWhenUpdating(),
+
+            TextEditorField::new('content6')->onlyWhenCreating(),
+            TextEditorField::new('content6')->onlyWhenUpdating(),
+
+
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+            ImageField::new('path2')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+
         ];
     }
 }

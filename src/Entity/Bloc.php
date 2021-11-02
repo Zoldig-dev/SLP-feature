@@ -32,6 +32,12 @@ class Bloc
     private $imageFile;
 
     /**
+     * @Vich\UploadableField(mapping="Bloc_image", fileNameProperty="path2")
+     * @var File|null
+     */
+    private $imageFile2;
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $name;
@@ -110,6 +116,16 @@ class Bloc
     }
 
     public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile2(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+    }
+
+    public function getImageFile2(): ?File
     {
         return $this->imageFile;
     }
