@@ -1,12 +1,12 @@
 <div class="container">
     <div class="ils_nous_font_confiance">
         <h2 class="size-3 center">Ils Nous Font Confiance </h2>
-        <div class="grid">
+        <div class="grid p-3">
             {% for client in clients %}
-                <div class="box_client p-1 flex justify-c align-c">
-                    <a href="{{ client.website }}">
+                <div class="box_client flex justify-c align-c p-1">
+                    <a href="{{ client.website }}" target="blank">
                         <img class="logo_client" src="{{ vich_uploader_asset(client) }}"
-                             alt="{{ client.name }}" width="100px">
+                             alt="Logo du client {{ client.name }}" width="100%">
                     </a>
                 </div>
             {% endfor %}
