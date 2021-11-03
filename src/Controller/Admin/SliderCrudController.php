@@ -3,8 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Slider;
+use App\Form\ImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -28,9 +30,10 @@ class SliderCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name', 'Nom du slider'),
-            TextField::new('imageFile', 'Images du slider')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile', 'Images du slider')->setFormType(VichImageType::class)->onlyWhenUpdating(),
-            ImageField::new('name')->setBasePath('/uploads/images/slider')->onlyOnIndex(),
+            CollectionField::new('images')->onlyOnIndex(),
+            CollectionField::new('images')
+                ->setEntryType(ImageType::class)
+                ->onlyOnForms()
         ];
     }
 }

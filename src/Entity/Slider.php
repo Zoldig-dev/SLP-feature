@@ -34,7 +34,7 @@ class Slider
     private $imageFile;
 
     /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="slider")
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="slider", cascade={"persist"})
      */
     private $images;
 

@@ -1,13 +1,14 @@
 <!-- Slider main container -->
 
 <!-- Slider main container -->
+
 <div class="swiper">
 
     <div class="swiper-wrapper">
         <!-- Slides -->
 
-        {% for slide in slides %}
-            <div class="swiper-slide"><img src="{{ vich_uploader_asset(slide) }}" alt="" width="100%"></div>
+        {% for key,img in imgs %}
+            <div class="swiper-slide"><img src="/uploads/images/slider/" alt="{{key}}:{{img.description}}" width="100%"></div>
         {% endfor %}
 
     </div>
