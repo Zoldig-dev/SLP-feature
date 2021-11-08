@@ -21,7 +21,7 @@ class SlpEasyGestionController extends AbstractController
     public function index(ImageRepository $imageRepository): Response
     {
         // la clée doit être changer
-        $slide = $imageRepository->findBy(array('slider'=>5));
+        $slide = $imageRepository->findBy(array('slider'=>1));
 
         return $this->render('slp_easy_gestion/index.html.twig', [
             'controller_name' => 'SlpEasyGestionController',

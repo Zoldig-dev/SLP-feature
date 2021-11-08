@@ -6,19 +6,29 @@
 
     {% include "metiers/navMetiers.html.twig" %}
 
-    <div class="container flex justify-c">
-        <div class="metiers flex column justify-c align-c">
+    <section class="logistique" id="logistique">
+        {% include "metiers/logistique.html.twig" %}
+    </section>
 
-            {% for metier in metiers %}
-                <h2 style=""> {{ metier.name }} </h2>
-                <div class="metier_bloc flex row justify-se">
-                    <p> {{ metier.content }}</p>
-                    <img src="{{ vich_uploader_asset(metier) }}" alt="" width="100%">
-                </div>
-            {% endfor %}
+    <section class="signaletique" id="signaletique">
+        {% include "metiers/signaletique.html.twig" %}
+    </section>
 
-        </div>
-    </div>
+    <section class="colisage" id="colisage">
+        {% include "metiers/colisage.html.twig" %}
+    </section>
+
+    <section class="ecommerce" id="ecommerce">
+        {% include "metiers/ecommerce.html.twig" %}
+    </section>
+
+    <section class="approvisionnement-reseaux" id="approvisionnement-reseaux">
+        {% include "metiers/approvisionnement-reseaux.html.twig" %}
+    </section>
+
+    <section class="transport" id="transport">
+        {% include "metiers/transport.html.twig" %}
+    </section>
 
 
 {% endblock %}
