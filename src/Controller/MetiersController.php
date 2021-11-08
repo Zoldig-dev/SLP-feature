@@ -18,10 +18,25 @@ class MetiersController extends AbstractController
 
     public function index(BlocRepository $blocRepo): Response
     {
+        $logistique = $blocRepo->findOneBy(['name' => 'Logistique']);
+        $signaletique = $blocRepo->findOneBy(['name' => 'Signalétique']);
+        $colisage = $blocRepo->findOneBy(['name' => 'Colisage']);
+        $ecommerce = $blocRepo->findOneBy(['name' => 'E-commerce']);
+        $approvisionnementReseaux = $blocRepo->findOneBy(['name' => 'Approvisionnement réseaux']);
+        $transport = $blocRepo->findOneBy(['name' => 'Transport']);
+
+
+
+
         return $this->render('metiers/index.html.twig', [
             'controller_name' => 'MetiersController',
             'metiers' => $blocRepo->findAll(),
-
+            'logistique' => $logistique,
+            'signaletique' => $signaletique,
+            'colisage' => $colisage,
+            'ecommerce' => $ecommerce,
+            'approvisionnementReseaux' => $approvisionnementReseaux,
+            'transport' => $transport,
         ]);
     }
 
