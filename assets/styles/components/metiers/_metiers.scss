@@ -10,6 +10,9 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: sticky;
+  top: 49.09px;
+  z-index: 999;
   background-color: var(--gris);
 
   @include m.mq(large) {
@@ -17,6 +20,9 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
+    position: relative;
+    top: 0;
+    z-index: 1;
 
     .nav-metier_item {
       width: 80%;
