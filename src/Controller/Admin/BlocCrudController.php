@@ -40,37 +40,23 @@ class BlocCrudController extends AbstractCrudController
 
         return [
             TextField::new('name', 'Libéllé du metier'),
-            
-            TextEditorField::new('content')->onlyWhenCreating(),
-            TextEditorField::new('content')->onlyWhenUpdating(),
 
-            TextEditorField::new('content2')->onlyWhenCreating(),
-            TextEditorField::new('content2')->onlyWhenUpdating(),
-
-            TextEditorField::new('content3')->onlyWhenCreating(),
-            TextEditorField::new('content3')->onlyWhenUpdating(),
-
-            TextEditorField::new('content4')->onlyWhenCreating(),
-            TextEditorField::new('content4')->onlyWhenUpdating(),
-
-            TextEditorField::new('content5')->onlyWhenCreating(),
-            TextEditorField::new('content5')->onlyWhenUpdating(),
-
-            TextEditorField::new('content6')->onlyWhenCreating(),
-            TextEditorField::new('content6')->onlyWhenUpdating(),
-
+            TextEditorField::new('content')->onlyOnForms(),
+            TextEditorField::new('content2')->onlyOnForms(),
+            TextEditorField::new('content3')->onlyOnForms(),
+            TextEditorField::new('content4')->onlyOnForms(),
+            TextEditorField::new('content5')->onlyOnForms(),
+            TextEditorField::new('content6')->onlyOnForms(),
 
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
-            TextField::new('description')->onlyWhenCreating(),
-            TextField::new('description')->onlyWhenUpdating(),
+            TextField::new('description')->onlyOnForms(),
 
             TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenCreating(),
             TextField::new('imageFile2')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
-            TextField::new('description2')->onlyWhenCreating(),
-            TextField::new('description2')->onlyWhenUpdating(),
+            TextField::new('description2')->onlyOnForms(),
 
             ImageField::new('path')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
             ImageField::new('path2')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),

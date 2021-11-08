@@ -54,6 +54,7 @@ class Clients
     public function setImageFile(?File $imageFile = null): void
     {
         $this->imageFile = $imageFile;
+
     }
 
     public function getImageFile(): ?File

@@ -99,6 +99,11 @@ class Bloc
      */
     private $content6;
 
+    /**
+     * @ORM\Column(type="datetime_immutable", nullable=true)
+     */
+    private $updatedAt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +124,9 @@ class Bloc
     public function setImageFile(?File $imageFile = null): void
     {
         $this->imageFile = $imageFile;
+        if (null !== $imageFile) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
     }
 
     public function getImageFile(): ?File
@@ -129,6 +137,9 @@ class Bloc
     public function setImageFile2(?File $imageFile2 = null): void
     {
         $this->imageFile2 = $imageFile2;
+        if (null !== $imageFile2) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
     }
 
     public function getImageFile2(): ?File
@@ -288,6 +299,18 @@ class Bloc
     public function setImageFile3($imageFile3)
     {
         $this->imageFile3 = $imageFile3;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
