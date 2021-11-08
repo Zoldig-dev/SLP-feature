@@ -1,1 +1,13 @@
- <h2>{{ logistique.name }}</h2>
+ <div class="container mt-2 mb-2">
+   <h2 class="size-2 pb-2 uppercase center">{{ logistique.name }}</h2>
+   <div class="logistique-content flex align-c">
+      <div class="logistique-content-left">
+          {{ logistique.content | raw }}
+          {{ logistique.content2 | raw }}
+          {{ logistique.content3 | raw }}
+      </div>
+      <div class="logistique-content-right">
+          <img src="/uploads/images/Bloc/{{ logistique.path }}" alt="{{ logistique.description }}" width="100%">
+      </div>
+   </div>
+ </div>

@@ -1,0 +1,44 @@
+@use "../../media-queries" as m;
+
+.logistique {
+  background: black;
+  color: white;
+
+  h2 {
+    color: var(--orange);
+  }
+
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    @include m.mq(large) {
+      width: 100%;
+    }
+  }
+  &-content {
+    width: 100%;
+    justify-content: space-between;
+    &-left {
+      padding: 2rem;
+      strong {
+        color: var(--orange);
+      }
+      @include m.mq(large) {
+        padding: 2rem;
+      }
+    }
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+
+      @include m.mq(large) {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+    @include m.mq(large) {
+      flex-direction: column;
+    }
+  }
+}

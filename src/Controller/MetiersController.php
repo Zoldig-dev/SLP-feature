@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\BlocRepository;
+use App\Repository\ImageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +17,7 @@ class MetiersController extends AbstractController
      */
     #[Route('/metiers', name: 'metiers')]
 
-    public function index(BlocRepository $blocRepo): Response
+    public function index(BlocRepository $blocRepo, ImageRepository $imageRepo): Response
     {
         $logistique = $blocRepo->findOneBy(['name' => 'Logistique']);
         $signaletique = $blocRepo->findOneBy(['name' => 'Signalétique']);
@@ -25,7 +26,7 @@ class MetiersController extends AbstractController
         $approvisionnementReseaux = $blocRepo->findOneBy(['name' => 'Approvisionnement réseaux']);
         $transport = $blocRepo->findOneBy(['name' => 'Transport']);
 
-
+        $slide = $imageRepo->findBy(array('slider'=>3));
 
 
         return $this->render('metiers/index.html.twig', [
@@ -37,6 +38,7 @@ class MetiersController extends AbstractController
             'ecommerce' => $ecommerce,
             'approvisionnementReseaux' => $approvisionnementReseaux,
             'transport' => $transport,
+            'slide' => $slide,
         ]);
     }
 

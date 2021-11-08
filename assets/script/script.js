@@ -1,47 +1,42 @@
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import {initSwiper} from "./swiper";
-import {scrollDownTag} from "./scrollDownTag";
-
-// CKeditor ----------------------------------
-ClassicEditor
-    .create( document.querySelector( '#editor' ) )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
+import { initSwiper } from "./swiper";
+import { initSwiper2 } from "./swiper";
+import { scrollDownTag } from "./scrollDownTag";
 
 // nav
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
+  const navLinks = document.querySelectorAll(".nav-links li");
 
+  burger.addEventListener("click", () => {
+    //Toggle Nav
+    nav.classList.toggle("nav-active");
 
-    burger.addEventListener('click', () => {
-        //Toggle Nav
-        nav.classList.toggle('nav-active');
+    //Animate Links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${
+          index / 7 + 0.5
+        }s`;
+      }
+    });
 
-        //Animate Links
-        navLinks.forEach((link,index)=>{
-            if (link.style.animation){
-                link.style.animation ='';
-            }else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
-            }
-        })
+    // burger animation
+    burger.classList.toggle("toggle");
+  });
+};
 
-        // burger animation
-        burger.classList.toggle('toggle');
-     });
-
-}
-
-navSlide()
+navSlide();
 
 // Swiper slider
-initSwiper();
+if (document.querySelector(".easyG")) {
+  initSwiper();
+}
+if (document.querySelector(".signaletique")) {
+  initSwiper2();
+}
 
 // Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
 scrollDownTag();

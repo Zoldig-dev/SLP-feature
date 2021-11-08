@@ -6,11 +6,7 @@
 
     {% include "metiers/navMetiers.html.twig" %}
 
-    <pre>
-        {{ dump(metiers) }}
-    </pre>
-
-    <section class="logistique" id="logistique">
+    <section class="logistique flex column justify-c align-c" id="logistique">
         {% include "metiers/logistique.html.twig" %}
     </section>
 
@@ -18,19 +14,19 @@
         {% include "metiers/signaletique.html.twig" %}
     </section>
 
-    <section class="colisage" id="colisage">
+    <section class="colisage flex column justify-c align-c" id="colisage">
         {% include "metiers/colisage.html.twig" %}
     </section>
 
-    <section class="ecommerce" id="ecommerce">
+    <section class="ecommerce flex column justify-c align-c" id="ecommerce">
         {% include "metiers/ecommerce.html.twig" %}
     </section>
 
-    <section class="approvisionnement-reseaux" id="approvisionnement-reseaux">
+    <section class="approvisionnement-reseaux flex column justify-c align-c" id="approvisionnement-reseaux">
         {% include "metiers/approvisionnement-reseaux.html.twig" %}
     </section>
 
-    <section class="transport" id="transport">
+    <section class="transport flex column justify-c align-c" id="transport">
         {% include "metiers/transport.html.twig" %}
     </section>
 
