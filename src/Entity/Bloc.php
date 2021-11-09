@@ -302,7 +302,6 @@ class Bloc
         if (null !== $imageFile3) {
             $this->updatedAt = new \DateTimeImmutable();
         }
-
         return $this;
     }
 

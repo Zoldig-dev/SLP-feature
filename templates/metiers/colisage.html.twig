@@ -1,1 +1,13 @@
- <h2 class="size-2 pb-2 uppercase">{{ colisage.name }}</h2>
+<div class="container mt-2 mb-2">
+    <h2 class="size-2 pb-2 uppercase">{{ colisage.name }}</h2>
+    <div class="colisage-content flex align-c">
+      <div class="colisage-content-left">
+          <p>{{ colisage.content | raw }}</p>
+          <p>{{ colisage.content2 | raw }}</p>
+          <p>{{ colisage.content3 | raw }}</p>
+      </div>
+      <div class="colisage-content-right">
+          <img src="/uploads/images/Bloc/{{ colisage.path }}" alt="{{ colisage.description }}" width="100%">
+      </div>
+   </div>
+</div>
