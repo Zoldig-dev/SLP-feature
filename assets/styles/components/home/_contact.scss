@@ -1,14 +1,18 @@
-@import "assets/styles/variables";
+@use "../../media-queries" as m;
 
 .contact {
-  background-image:
-          linear-gradient(
-                  to right,
-                  rgba(0, 0, 0, 0.6),
-                  rgba(0, 0, 0, 0.8)
-          ),
-          url("../../../../assets/images/bg-contact.jpg");
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../../../../assets/images/bg-contact.jpg");
   padding: 4rem 0;
+  @include m.mq(large) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   &-title {
     color: var(--orange);
@@ -38,7 +42,7 @@
           input,
           select,
           textarea {
-            border-radius: .2rem;
+            border-radius: 0.2rem;
           }
 
           input,
@@ -60,7 +64,7 @@
           cursor: pointer;
           background: #565656;
           border: none;
-          border-radius: .2rem;
+          border-radius: 0.2rem;
           transition: all 0.2s ease-in-out;
 
           &:hover {
