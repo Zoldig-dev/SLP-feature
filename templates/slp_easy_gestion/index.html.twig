@@ -37,6 +37,46 @@
             <div class="easyG-slider">
                 {% include 'slp_easy_gestion/_sliderEasyGestion.html.twig' %}
             </div>
+            {% for etape in slide %}
+            <div class="easyG-sliderInfo {{ etape.name }} {% if etape.id == 1 %} active {% endif %}">
+                {% if etape.id == 1 %}
+                    <h3>Passation de commande</h3>
+                    <p>Pour passer une commande, il suffit de sélectionner un article et de l'ajouter au panier</p>
+                    <p>Après validation la commande nous est transmise automatiquement pour traitement</p>
+                    <p>SLP easy-gestion autorise une double ou triple validation</p>
+                    <p>Le point de vente concerné a la possibilité de consulter l'historique de ses commandes</p>
+                    <p>Les services centraux peuvent consulter l'ensemble des commandes du réseau</p>
+                {% elseif etape.id == 2 %}
+                    <h3>Accueil</h3>
+                    <p>Cette page vous permet d'accéder, d'un simple clic à toutes les fonctionnalités offertes par SLP easy-gestion</p>
+                {% elseif etape.id == 3 %}
+                    <h3>Produits</h3>
+                    <p>Visualisation claire et rapide de l'état de votre stock par les pastilles de couleurs associées à chaque référence, vous permettant d'identifier les produits pour lesquels le seuil d'alerte est atteint voire en rupture.</p>
+                    <p>En cliquant sur le visuel d'une référence vous accédez à la fiche détaillée du produit.</p>
+                {% elseif etape.id == 4 %}
+                    <h3>Fiche produit</h3>
+                    <p>Cette fiche reprend toutes les caractéristiques techniques:</p>
+                    <ul>
+                        <li>Référence</li>
+                        <li>Prix</li>
+                        <li>Conditionnement</li>
+                        <li>Délai de fabrication</li>
+                        <li>Emballage</li>
+                        <li>Descriptif produit</li>
+                    </ul>
+                {% elseif etape.id == 5 %}
+                    <h3>Stock</h3>
+                    <p>Sur cet écran vous visualisez de façon synthétique pour chaque référence:</p>
+                    <ul>
+                        <li>Libellé</li>
+                        <li>Le stock en temps réel</li>
+                        <li>Le stock min/maxi</li>
+                        <li>L'état des éventuelles commandes en cours</li>
+                        <li>Le conditionnement</li>
+                    </ul>
+                {% endif %}
+            </div>
+            {% endfor %}  
         </div>
     </section>
 

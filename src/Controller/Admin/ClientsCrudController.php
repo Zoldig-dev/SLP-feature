@@ -20,7 +20,7 @@ class ClientsCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInSingular('nos clients')
+            ->setEntityLabelInSingular('un client')
             ->setEntityLabelInPlural('Nos clients')
             ;
     }
@@ -29,10 +29,10 @@ class ClientsCrudController extends AbstractCrudController
     {
         return [
 
-            TextField::new('name', label: 'Marque'),
+            TextField::new('name', label: 'Libélé du client'),
             TextField::new('website', label: 'Site web'),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('imageFile', label: 'Logo du client')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile', label: 'Logo du client')->setFormType(VichImageType::class)->onlyWhenUpdating(),
             ImageField::new('path', label: 'logo')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
             // A voir si on supprime cette ligne ou pas
             //SlugField::new('slug')->setTargetFieldName('name'),
