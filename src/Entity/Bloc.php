@@ -299,7 +299,9 @@ class Bloc
     public function setImageFile3($imageFile3)
     {
         $this->imageFile3 = $imageFile3;
-
+        if (null !== $imageFile3) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
         return $this;
     }
 

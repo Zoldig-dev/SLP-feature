@@ -4,7 +4,9 @@
   background: black;
   color: white;
   &-bg {
-    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: relative;
     z-index: 1;
     @include m.mq(large) {
       width: auto;
@@ -23,6 +25,7 @@
   }
 
   .container {
+    // position:absolute;
     @include m.mq(large) {
       width: 100%;
     }
@@ -30,6 +33,7 @@
   &-content {
     width: 100%;
     justify-content: center;
+    // position:relative;
     &-top {
       padding: 2rem;
       text-align: center;
