@@ -5,5 +5,5 @@ home_shortcut:
   path: /
   controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
   defaults:
-    route: 'home'
+    route: "home"
     _locale: fr
