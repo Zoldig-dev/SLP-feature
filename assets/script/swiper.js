@@ -29,7 +29,7 @@ export function initSwiper() {
       },
       on: {
         slideChange: function () {
-          console.log(this.activeIndex);
+          // console.log(this.activeIndex);
           let slideElements = document.querySelectorAll(".easyG-sliderInfo");
           slideElements.forEach((element, key) => {
             element.classList.remove("active");

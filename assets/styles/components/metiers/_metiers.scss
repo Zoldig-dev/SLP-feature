@@ -2,6 +2,29 @@
 
 // Component: metiers
 // --------------------------------------------------
+h2 {
+  color: var(--orange);
+}
+.logistique,
+.signaletique,
+.colisage,
+.ecommerce,
+.approReseaux,
+.transport {
+  background: var(--noir);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .container {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(175, 178, 218, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem;
+  }
+}
 
 // nav metiers
 // --------------------------------------------------

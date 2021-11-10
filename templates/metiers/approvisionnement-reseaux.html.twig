@@ -1,1 +1,20 @@
- <h2 class="size-2 pb-2 uppercase">{{ approvisionnementReseaux.name }}</h2>
+<div class="container mt-2 mb-2">
+    <h2 class="size-2 pb-2 pt-2 uppercase center">{{ approvisionnementReseaux.name }}</h2>
+    <div class="approReseaux-content flex justify-c">
+        <img class="approReseaux-content_img" src="/uploads/images/Bloc/{{ approvisionnementReseaux.path }}" alt="{{ approvisionnementReseaux.description }}" width="600px">
+        <div class="approReseaux-content_text" >
+        {{ approvisionnementReseaux.content | raw }}
+        {{ approvisionnementReseaux.content2 | raw }}
+        {{ approvisionnementReseaux.content3 | raw }}
+        </div>
+    </div>
+
+    <div class="approReseaux-content flex justify-c">
+            <div class="approReseaux-content_text" >
+            {{ approvisionnementReseaux.content4 | raw }}
+            {{ approvisionnementReseaux.content5 | raw }}
+            {{ approvisionnementReseaux.content6 | raw }}
+            </div>
+            <img class="approReseaux-content_img" src="/uploads/images/Bloc/{{ approvisionnementReseaux.path2 }}" alt="{{ approvisionnementReseaux.description2 }}" width="600px">
+    </div>
+</div>

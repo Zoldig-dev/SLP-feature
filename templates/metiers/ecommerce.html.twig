@@ -1,27 +1,25 @@
-<div class="ecommerce-bg" style="background-image:url(uploads/images/Bloc/{{ ecommerce.backgroud }})">
-    <div class="container mt-2 mb-2">
-        <div class="ecommerce-content">
-        <h2 class="size-2 pb-2 uppercase">{{ ecommerce.name }}</h2>
-            <div class="ecommerce-content-top">
-            {{ ecommerce.content | raw }}
+<div class="container mt-2 mb-2">
+    <div class="ecommerce-content">
+    <h2 class="size-2 pb-2 uppercase center">{{ ecommerce.name }}</h2>
+        <div class="ecommerce-content-top">
+        {{ ecommerce.content | raw }}
+        </div>
+        <div class="ecommerce-content-grid">
+            <div class="ecommerce-content-grid-card">
+            {{ ecommerce.content2 | raw }}
             </div>
-            <div class="ecommerce-content-grid">
-                <div class="ecommerce-content-grid-card">
-                {{ ecommerce.content2 | raw }}
-                </div>
-                <div class="ecommerce-content-grid-card">
-                    {{ ecommerce.content3 | raw }}
-                </div>
-                <div class="ecommerce-content-grid-card">
-                {{ ecommerce.content4 | raw }}
-                </div>
-                <div class="ecommerce-content-grid-card">
-                {{ ecommerce.content5 | raw }}
-                </div>
+            <div class="ecommerce-content-grid-card">
+                {{ ecommerce.content3 | raw }}
             </div>
-            <div class="ecommerce-content-button">
-            {{ ecommerce.content6 | raw }}
+            <div class="ecommerce-content-grid-card">
+            {{ ecommerce.content4 | raw }}
             </div>
+            <div class="ecommerce-content-grid-card">
+            {{ ecommerce.content5 | raw }}
+            </div>
+        </div>
+        <div class="ecommerce-content-button">
+        {{ ecommerce.content6 | raw }}
         </div>
     </div>
 </div>

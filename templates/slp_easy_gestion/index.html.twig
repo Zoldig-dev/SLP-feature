@@ -53,7 +53,7 @@
                 {% include 'slp_easy_gestion/_sliderEasyGestion.html.twig' %}
             </div>
             {% for etape in slide %}
-            <div class="easyG-sliderInfo {{ etape.name }} {% if etape.id == 1 %} active {% endif %}">
+            <div class="easyG-sliderInfo {% if etape.id == 1 %} active {% endif %}">
                 {% if etape.id == 1 %}
                     <h3>Passation de commande</h3>
                     <p>Pour passer une commande, il suffit de sélectionner un article et de l'ajouter au panier</p>

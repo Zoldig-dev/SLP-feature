@@ -1,32 +1,18 @@
 @use "../../media-queries" as m;
 
 .colisage {
-  background: black;
-  color: white;
-
-  h2 {
-    color: var(--orange);
-    text-align: center;
-  }
-
-  .container {
-    background: rgba(255, 255, 255, 0.2);
-    @include m.mq(large) {
-      width: 100%;
-    }
-  }
   &-content {
     width: 100%;
     justify-content: space-between;
     &-left {
       padding: 1rem;
-      p{
-          padding-bottom: 1rem;
+      p {
+        padding-bottom: 1rem;
       }
       strong {
         color: var(--orange);
       }
-      li{
+      li {
         margin-left: 1rem;
       }
       @include m.mq(large) {
