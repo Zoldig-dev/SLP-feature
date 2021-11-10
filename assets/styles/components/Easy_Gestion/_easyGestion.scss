@@ -9,19 +9,34 @@
   }
   &-title {
     color: var(--orange);
-    text-align: center;
-    font-size: 2rem;
-    padding-bottom: 1rem;
   }
   &-description {
-    text-align: center;
-    padding-bottom: 1rem;
     h3 {
       color: var(--orange);
       padding: 0.5rem 0;
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--orange);
+        margin-bottom: 1rem;
+      }
     }
     li {
       list-style: none;
+    }
+    &-item {
+      width: 100%;
+      min-height: 18rem;
+      flex-wrap: wrap;
+      &_text {
+        height: 100%;
+      }
+      &_img {
+        width: 20rem;
+        height: 100%;
+      }
     }
   }
   &-slider {
@@ -29,6 +44,19 @@
   }
   &-sliderInfo {
     display: none;
+    text-align: start;
+    height: 12rem;
+    padding: 1rem 0;
+    list-style: none;
+    h3 {
+      text-align: center;
+      color: var(--orange);
+      padding: 0.5rem 0;
+    }
+    p {
+      padding: 0.5rem 0;
+    }
+
     &.active {
       display: block;
     }

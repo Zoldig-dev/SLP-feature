@@ -3,36 +3,51 @@
 {% block title %}SLP Easy Gestion{% endblock %}
 {% block body %}
 
-    <section class="easyG flex column justify-c align-c">
+    <section class="easyG flex column justify-c align-c pt-3 pb-3">
         <div class="container">
-            <div class="easyG-title">
-                <h2>SLP EASY-GESTION</h2>
+            <div class="easyG-title pb-2">
+                <h2 class="center size-3 uppercase">SLP EASY-GESTION</h2>
             </div>
             <div class="easyG-description">
-                <p><strong>S L P</strong> met à la disposition de ses clients un outil de gestion via le Web permettant
+                <p class="center pb-4"><strong>S L P</strong> met à la disposition de ses clients un outil de gestion via le Web permettant
                     :</p>
 
-                <h3>Pour qui ?</h3>
-                <p>Aux collaborateurs du siège, dûment habilités, d’avoir, en temps réel, une vision globale ou
-                    détaillée :</p>
-                <ul>
-                    <li>des utilisateurs</li>
-                    <li>des produits</li>
-                    <li>des commandes effectuées par leur réseau de vente</li>
-                    <li>de l’état du stock</li>
-                    <li>du suivi des livraisons fournisseurs</li>
-                    <li>des rotations produits</li>
-                    <li>des commandes de réassort</li>
-                    <li>Etc…</li>
-                </ul>
+                <div class="easyG-description-item start pb-2 flex justify-sb align-c">
+                    <div class="easyG-description-item_text">
+                        <h3>Pour qui ?</h3>
+                        <p>Aux collaborateurs du siège, dûment habilités, d’avoir, en temps réel, une vision globale ou
+                            détaillée :</p>
+                        <ul>
+                            <li>des utilisateurs</li>
+                            <li>des produits</li>
+                            <li>des commandes effectuées par leur réseau de vente</li>
+                            <li>de l’état du stock</li>
+                            <li>du suivi des livraisons fournisseurs</li>
+                            <li>des rotations produits</li>
+                            <li>des commandes de réassort</li>
+                            <li>Etc…</li>
+                        </ul>
+                    </div>
+                    <img class="easyG-description-item_img" src="{{ asset('build/images/who.svg') }}" alt="">
+                </div>
 
-                <h3>Pour faire quoi ?</h3>
-                <p>Aux points de vente de commander quotidiennement et facilement le matériel dont ils ont besoin.</p>
-                <p>De connaître l’historique de leurs commandes.</p>
+                <div class="easyG-description-item end pb-2 flex justify-sb align-c">
+                    <img class="easyG-description-item_img" src="{{ asset('build/images/what.svg') }}" alt="">
+                    <div class="easyG-description-item_text">
+                        <h3>Pour faire quoi ?</h3>
+                        <p>Aux points de vente de commander quotidiennement et facilement le matériel dont ils ont besoin.</p>
+                        <p>De connaître l’historique de leurs commandes.</p>
+                    </div>
+                </div>
 
-                <h3>Mais encore ?</h3>
-                <p>Cet outil est personnalisé au nom du client et totalement sécurisé.</p>
-                <p>Il permet, en fonction de ses besoins : une validation de commande à 3 niveaux</p>
+                <div class="easyG-description-item pb-2 flex justify-sb align-c">
+                    <div class="easyG-description-item_text">
+                        <h3>Mais encore ?</h3>
+                        <p>Cet outil est personnalisé au nom du client et totalement sécurisé.</p>
+                        <p>Il permet, en fonction de ses besoins : une validation de commande à 3 niveaux</p>
+                    </div>
+                    <img class="easyG-description-item_img" src="{{ asset('build/images/and.svg') }}" alt="">
+                </div>
             </div>
             <div class="easyG-slider">
                 {% include 'slp_easy_gestion/_sliderEasyGestion.html.twig' %}
