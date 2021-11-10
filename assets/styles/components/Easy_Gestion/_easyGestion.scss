@@ -27,4 +27,10 @@
   &-slider {
     padding: 1rem 0;
   }
+  &-sliderInfo {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 }

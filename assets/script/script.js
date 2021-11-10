@@ -1,6 +1,15 @@
 import { initSwiper } from "./swiper";
 import { initSwiper2 } from "./swiper";
 import { scrollDownTag } from "./scrollDownTag";
+import Swiper, {
+  Navigation,
+  Autoplay,
+  EffectCube,
+  EffectCoverflow,
+  Pagination,
+} from "swiper";
+
+Swiper.use([Navigation, Autoplay, EffectCube, EffectCoverflow, Pagination]);
 
 // nav
 const navSlide = () => {
@@ -34,9 +43,10 @@ navSlide();
 if (document.querySelector(".easyG")) {
   initSwiper();
 }
+
 if (document.querySelector(".signaletique")) {
   initSwiper2();
 }
 
 // Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
-scrollDownTag();
+// scrollDownTag();
