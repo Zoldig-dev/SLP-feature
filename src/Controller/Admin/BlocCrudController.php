@@ -18,12 +18,12 @@ class BlocCrudController extends AbstractCrudController
         return Bloc::class;
     }
  
-    public function configureAssets(Assets $assets): Assets
-    {
-        return $assets
-            ->addJsFile('build/script.js')
-            ->addCssFile('build/style.css');
-    }
+    // public function configureAssets(Assets $assets): Assets
+    // {
+    //     return $assets
+    //         ->addJsFile('build/script.js')
+    //         ->addCssFile('build/style.css');
+    // }
 
     public function configureCrud(Crud $crud): Crud
     {
