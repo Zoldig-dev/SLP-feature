@@ -49,4 +49,4 @@ if (document.querySelector(".signaletique")) {
 }
 
 // Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
-// scrollDownTag();
+scrollDownTag();

@@ -1,11 +1,15 @@
 .easyG {
   justify-content: center;
   align-items: center;
-  background: rgb(0, 0, 0);
-  color: white;
+  // background: rgb(0, 0, 0);
+  // color: white;
   .container {
-    background: var(--noir);
-    padding: 2rem 3rem;
+    // background: white;
+    box-shadow: 0 8px 32px 0 rgba(175, 178, 218, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem 3rem;
   }
   &-title {
     color: var(--orange);
