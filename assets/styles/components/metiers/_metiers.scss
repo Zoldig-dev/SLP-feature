@@ -18,10 +18,15 @@ h2 {
   background-size: cover;
   color: white;
   .container {
+    background: rgba(0, 0, 0, 0.37);
     box-shadow: 0 8px 32px 0 rgba(175, 178, 218, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1rem;
+    border-radius: 0.2rem;
+  }
+  strong {
+    color: var(--orange);
   }
 }
 .active {

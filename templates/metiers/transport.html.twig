@@ -1,15 +1,13 @@
 <div class="container mt-2 mb-2">
     <h2 class="size-2 pb-2 pt-2 uppercase center">{{ transport.name }}</h2>
-    <div class="transport-content">{{ transport.content | raw }}</div>
-    <div class="transport-content flex justify-sb">
-      <div class="bloc content2">
+    {{ transport.content | raw }}
+    <div class="transport-content flex align-c pb-2">
+      <div>
         {{ transport.content2 | raw }}
         {{ transport.content3 | raw }}
       </div>
-      <img src="/uploads/images/Bloc/{{ transport.path }}" alt="{{ transport.description }}" width="600px">
+      <img src="/uploads/images/Bloc/{{ transport.path2 }}" alt="{{ transport.description }}" width="600px">
     </div>
-    <div class="bloc content2">
-      {{ transport.content4 | raw }}
-    </div>
+    {{ transport.content4 | raw }}
   </div>
 </div>

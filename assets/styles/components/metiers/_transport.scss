@@ -1,3 +1,34 @@
+@use "../../media-queries" as m;
+
 .transport {
   color: white;
+  div {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  strong {
+    color: var(--orange);
+  }
+  &-content {
+    div {
+      text-align: start;
+      padding-bottom: 0;
+      ul {
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+    img {
+      padding-left: 1rem;
+    }
+    @include m.mq(large) {
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+        width: 100%;
+        padding: 1rem 0;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 <div class="container mt-2 mb-2">
     <div class="ecommerce-content">
     <h2 class="size-2 pb-2 uppercase center">{{ ecommerce.name }}</h2>
-        <div class="ecommerce-content-top">
+        <div class="ecommerce-content-head">
         {{ ecommerce.content | raw }}
         </div>
         <div class="ecommerce-content-grid">
@@ -18,8 +18,13 @@
             {{ ecommerce.content5 | raw }}
             </div>
         </div>
-        <div class="ecommerce-content-button">
-        {{ ecommerce.content6 | raw }}
+        <div class="ecommerce-content-foot flex column justify-c align-c pt-2 pb-2">
+            {{ ecommerce.content6 | raw }}
+        </div>
+        <div class="ecommerce-content-btn pb-2">
+            <a href="{{ path('home') }}#contact">
+                demande de devis
+            </a>
         </div>
     </div>
 </div>
