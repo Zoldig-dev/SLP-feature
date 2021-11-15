@@ -1,11 +1,11 @@
-<nav class="nav-metier">
+<nav class="nav-metier pb-1">
   {% for metier in metiers %}
     <a 
       class="nav-metier_item center"
       href="#{{ metier.name }}"
     >
-    {{ metier.name }}
-    <img src="{{ metier.path }}" alt="{{ metier.description }}">
+    <img src="/uploads/images/Bloc/{{ metier.path }}" alt="{{ metier.description }}">
+    <p>{{ metier.name }}</p>
     </a>
   {% endfor %}
 </nav>
