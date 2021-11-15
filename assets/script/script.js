@@ -48,17 +48,21 @@ if (document.querySelector(".signaletique")) {
   initSwiper2();
 }
 
+// nav page métiers
 function changeContentMetierTo() {
   let navlinks = document.querySelectorAll(".nav-metier_item");
   let sectionContent = document.querySelectorAll("section");
-  console.log(sectionContent);
+
   navlinks.forEach((link, linkKey) => {
     // pour chaque lien dans la liste
     link.addEventListener("click", (e) => {
       // on ajoute un écouteur d'événement sur le lien (click)
       sectionContent.forEach((section, sectionKey) => {
+        // pour chaque section
         section.classList.remove("active");
+        // on supprime la classe active
         if (sectionKey === linkKey) {
+          // si la section est égale à la clé du lien cliqué (linkKey) alors on ajoute la classe active
           section.classList.add("active");
         }
       });
@@ -68,4 +72,4 @@ function changeContentMetierTo() {
 changeContentMetierTo();
 
 // Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
-// scrollDownTag();
+scrollDownTag();

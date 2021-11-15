@@ -1,10 +1,11 @@
 .easyG {
   justify-content: center;
   align-items: center;
-  // background: rgb(0, 0, 0);
-  // color: white;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+  color: white;
   .container {
-    // background: white;
     box-shadow: 0 8px 32px 0 rgba(175, 178, 218, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);

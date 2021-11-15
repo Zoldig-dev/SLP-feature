@@ -12,16 +12,15 @@ h2 {
 .approReseaux,
 .transport {
   display: none;
-  min-height: 80vh;
+  min-height: 60vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  color: white;
   .container {
-    // background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 32px 0 rgba(175, 178, 218, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem;
   }
 }
