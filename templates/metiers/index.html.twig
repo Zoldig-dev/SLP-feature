@@ -6,35 +6,35 @@
 
     {% include "metiers/navMetiers.html.twig" %}
 
-    <section class="logistique flex column justify-c align-c" id="Logistique">
+    <section class="logistique column justify-c align-c active" id="Logistique">
         {% include "metiers/logistique.html.twig" %}
     </section>
 
     <section 
-        class="signaletique flex column justify-c align-c"
+        class="signaletique column justify-c align-c"
         id="Signalétique"
-        style="background-image: url('uploads/images/Bloc/{{ signaletique.backgroud }}')"
+        style="background-image: url('uploads/images/Bloc/{{ signaletique.backgroud }}'"
     >
         {% include "metiers/signaletique.html.twig" %}
     </section>
 
-    <section class="colisage flex column justify-c align-c" id="Colisage">
+    <section class="colisage column justify-c align-c" id="Colisage">
         {% include "metiers/colisage.html.twig" %}
     </section>
 
     <section 
-        class="ecommerce flex column justify-c align-c" id="E-commerce"
+        class="ecommerce column justify-c align-c" id="E-commerce"
         style="background-image: url('uploads/images/Bloc/{{ ecommerce.backgroud }}')"
     >
         {% include "metiers/ecommerce.html.twig" %}
     </section>
 
-    <section class="approReseaux flex column justify-c align-c" id="Approvisionnement réseaux">
+    <section class="approReseaux column justify-c align-c" id="Approvisionnement réseaux">
         {% include "metiers/approvisionnement-reseaux.html.twig" %}
     </section>
 
     <section 
-        class="transport flex column justify-c align-c"
+        class="transport column justify-c align-c"
         id="Transport"
         style="background-image: url('uploads/images/Bloc/{{ transport.backgroud }}')"
     >

@@ -2,6 +2,16 @@
 
 .signaletique {
   width: 100%;
+  backdrop-filter: brightness(20%);
+  position: relative;
+  height: 60rem;
+  color: #fff;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   @include m.mq(large) {
     min-height: 80rem;
   }
@@ -9,19 +19,21 @@
     min-height: 85rem;
   }
   .swiper {
-    width: 100% !important;
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
-    overflow-x: hidden;
+    width: 20rem;
+    height: 24rem;
     &-wrapper {
       width: 100% !important;
       gap: 1rem;
     }
     &-slide {
-      background-position: center !important;
-      background-size: cover !important;
-      width: 300px !important;
-      height: 300px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgb(255, 255, 255);
       img {
         display: block !important;
         width: 100% !important;

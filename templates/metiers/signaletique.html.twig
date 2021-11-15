@@ -1,12 +1,12 @@
-<div class="container mt-2 mb-2" style="background:url({{ signaletique.backgroud }});">
+<div class="container mt-2 mb-2">
   <h2 class="size-2 pb-2 uppercase center">{{ signaletique.name }}</h2>
   {{ signaletique.content | raw }}
   {{ signaletique.content2 | raw }}
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper pt-2 pb-2">
     <div class="swiper-wrapper">
         <!-- Slides -->
         {% for img in slide %}
-            <div class="swiper-slide"><img src="/uploads/images/slider/{{img.path}}" alt="{{ img.description }}"></div>
+            <div class="swiper-slide"><img title="{{img.name}}" src="/uploads/images/slider/{{img.path}}" alt="{{ img.description }}"></div>
         {% endfor %}
     </div>
     <div class="swiper-pagination"></div>

@@ -11,8 +11,9 @@ h2 {
 .ecommerce,
 .approReseaux,
 .transport {
-  // background: var(--noir);
-  // color: white;
+  min-height: 80vh;
+  display: none;
+  transition: all 0.5s ease;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -24,6 +25,9 @@ h2 {
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem;
   }
+}
+.active {
+  display: flex;
 }
 
 // nav metiers

@@ -28,7 +28,7 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('SLP')
-            ->setFaviconPath('build/images/logo-slp.png')
+            ->setFaviconPath('build/images/favicon.ico')
             ->renderContentMaximized(true)
             ->renderSidebarMinimized(false);
     }

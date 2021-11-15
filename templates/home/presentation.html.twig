@@ -1,18 +1,5 @@
-{#
-<!--Toutes les classes presentation sont contenus dans le fichier:
-/assets/styles/components/home/_presentation.scss-->
-<!-- Les classes flex row et column sont dans
-/assets/styles/_variables.scss-->
-#}
-
 <div class="presentation-transparent flex align-c">
-    {#
-    <!--Pour le scrollDown :
-    Zone de transparence laissant apparaitre le contenu de,
-    /templates/home/home_title.html.twig-->
-    #}
     <div class="presentation-tag">
-
         {#
         <!--le svg ci-dessous dessine l'onglet du Scroll Down-->
         #}
@@ -33,9 +20,6 @@
 </div>
 
 <section class="presentation flex justify-c pt-2">
-
-    {# <!--la classes container est dans le fichier:
-      /assets/styles/_variables.scss--> #}
     <div class="container">
         <div class="presentation-box">
             <h2 class="size-2 center p-2">Une surface d’entrepôt de 6000M², local hautement sécurisé sous
@@ -47,11 +31,6 @@
                     <div class="size-3">1992</div>
                     <p>Année de création</p>
                 </div>
-                {# permet de recuperer les valeurs de la table home_page_number_key
-                voir :
-                /src/Entity/HomePageNumberKey.php
-                /scr/Repository/HomePageNumberKeyRepository.php
-                /src/Controller/HomeController.php #}
                 {% for numberKey in numberKeys %}
                     <div class="presentation-card p-1 flex column justify-sa align-c">
                         <div class="size-3">{{ numberKey.productNumber }}</div>

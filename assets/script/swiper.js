@@ -6,9 +6,17 @@ import Swiper, {
   EffectCube,
   EffectCoverflow,
   Pagination,
+  EffectCards,
 } from "swiper";
 
-Swiper.use([Navigation, Autoplay, EffectCube, EffectCoverflow, Pagination]);
+Swiper.use([
+  Navigation,
+  Autoplay,
+  EffectCube,
+  EffectCoverflow,
+  Pagination,
+  EffectCards,
+]);
 
 export function initSwiper() {
   document.addEventListener("DOMContentLoaded", () => {
@@ -45,21 +53,21 @@ export function initSwiper() {
 
 export function initSwiper2() {
   const swiper2 = new Swiper(".mySwiper", {
-    effect: "coverflow",
+    effect: "cards",
     grabCursor: true,
-    centeredSlides: true,
+    // centeredSlides: true,
     slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
+    // coverflowEffect: {
+    //   rotate: 50,
+    //   stretch: 0,
+    //   depth: 100,
+    //   modifier: 1,
+    //   slideShadows: true,
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    initialSlide: 2,
+    // initialSlide: 2,
   });
 }

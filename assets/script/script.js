@@ -48,5 +48,24 @@ if (document.querySelector(".signaletique")) {
   initSwiper2();
 }
 
+function changeContentMetierTo() {
+  let navlinks = document.querySelectorAll(".nav-metier_item");
+  let sectionContent = document.querySelectorAll("section");
+  console.log(sectionContent);
+  navlinks.forEach((link, linkKey) => {
+    // pour chaque lien dans la liste
+    link.addEventListener("click", (e) => {
+      // on ajoute un écouteur d'événement sur le lien (click)
+      sectionContent.forEach((section, sectionKey) => {
+        section.classList.remove("active");
+        if (sectionKey === linkKey) {
+          section.classList.add("active");
+        }
+      });
+    });
+  });
+}
+changeContentMetierTo();
+
 // Scroll Down Tag HomePage "Accueil" in /assets/script/scrollDownTag.js
-scrollDownTag();
+// scrollDownTag();
