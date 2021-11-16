@@ -1,15 +1,6 @@
 import { initSwiper } from "./swiper";
 import { initSwiper2 } from "./swiper";
 import { scrollDownTag } from "./scrollDownTag";
-import Swiper, {
-  Navigation,
-  Autoplay,
-  EffectCube,
-  EffectCoverflow,
-  Pagination,
-} from "swiper";
-
-Swiper.use([Navigation, Autoplay, EffectCube, EffectCoverflow, Pagination]);
 
 // nav
 const navSlide = () => {
