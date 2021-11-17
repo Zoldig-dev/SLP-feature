@@ -28,11 +28,11 @@ class ClientsCrudController extends AbstractCrudController
     {
         return [
 
-            TextField::new('name', label: 'Libélé du client'),
-            TextField::new('website', label: 'Site web'),
-            TextField::new('imageFile', label: 'Logo du client')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile', label: 'Logo du client')->setFormType(VichImageType::class)->onlyWhenUpdating(),
-            ImageField::new('path', label: 'logo')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
+            TextField::new('name', 'Libélé du client'),
+            TextField::new('website', 'Site web'),
+            TextField::new('imageFile', 'Logo du client')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile', 'Logo du client')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            ImageField::new('path', 'logo')->setBasePath('/uploads/images/clients')->onlyOnIndex(),
         ];
 
     }

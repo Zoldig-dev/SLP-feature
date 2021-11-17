@@ -41,29 +41,29 @@ class BlocCrudController extends AbstractCrudController
         return [
             TextField::new('name', 'Libéllé du metier'),
 
-            TextEditorField::new('content', label:'Contenu texte 1')->onlyOnForms(),
-            TextEditorField::new('content2', label:'Contenu texte 2')->onlyOnForms(),
-            TextEditorField::new('content3', label:'Contenu texte 3')->onlyOnForms(),
-            TextEditorField::new('content4', label:'Contenu texte 4')->onlyOnForms(),
-            TextEditorField::new('content5', label:'Contenu texte 5')->onlyOnForms(),
-            TextEditorField::new('content6', label:'Contenu texte 6')->onlyOnForms(),
+            TextEditorField::new('content', 'Contenu texte 1')->onlyOnForms(),
+            TextEditorField::new('content2', 'Contenu texte 2')->onlyOnForms(),
+            TextEditorField::new('content3', 'Contenu texte 3')->onlyOnForms(),
+            TextEditorField::new('content4', 'Contenu texte 4')->onlyOnForms(),
+            TextEditorField::new('content5', 'Contenu texte 5')->onlyOnForms(),
+            TextEditorField::new('content6', 'Contenu texte 6')->onlyOnForms(),
 
-            TextField::new('imageFile', label:'Image 1, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile', label:'Image 1, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('imageFile', 'Image 1, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile', 'Image 1, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
-            TextField::new('description', label:'Description image 1')->onlyOnForms(),
+            TextField::new('description', 'Description image 1')->onlyOnForms(),
 
-            TextField::new('imageFile2', label:'Image 2, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile2', label:'Image 2, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('imageFile2', 'Image 2, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile2', 'Image 2, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
-            TextField::new('description2', label:'Description image 2')->onlyOnForms(),
+            TextField::new('description2', 'Description image 2')->onlyOnForms(),
 
-            ImageField::new('path', label:'Image 1')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
-            ImageField::new('path2', label:'Image 2')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
-            ImageField::new('backgroud', label:'Image de fond')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+            ImageField::new('path', 'Image 1')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+            ImageField::new('path2', 'Image 2')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
+            ImageField::new('backgroud', 'Image de fond')->setBasePath('/uploads/images/bloc')->onlyOnIndex(),
 
-            TextField::new('imageFile3', label:'Image de fond, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
-            TextField::new('imageFile3', label:'Image de fond, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
+            TextField::new('imageFile3', 'Image de fond, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenCreating(),
+            TextField::new('imageFile3', 'Image de fond, taille max 2mg')->setFormType(VichImageType::class)->onlyWhenUpdating(),
 
         ];
     }

@@ -15,7 +15,10 @@ class MetiersController extends AbstractController
      * @param BlocRepository $blocRepo
      * @return Response
      */
-    #[Route('/metiers', name: 'metiers')]
+   
+    /**
+     * @Route("/metiers", name="metiers")
+     */
 
     public function index(BlocRepository $blocRepo, ImageRepository $imageRepo): Response
     {

@@ -38,9 +38,9 @@ class HomePageNumberKeyCrudController extends AbstractCrudController
     {
         return [
 
-            NumberField::new('productNumber',label: 'Produits Référencés'),
-            NumberField::new('storeNumber',label: 'Magasins réalisés'),
-            NumberField::new('packageNumber',label: 'Colis envoyés par an'),
+            NumberField::new('productNumber','Produits Référencés'),
+            NumberField::new('storeNumber','Magasins réalisés'),
+            NumberField::new('packageNumber','Colis envoyés par an'),
 
         ];
     }
