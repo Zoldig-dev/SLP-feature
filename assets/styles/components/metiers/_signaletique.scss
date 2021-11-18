@@ -3,6 +3,12 @@
 .signaletique {
   width: 100%;
   color: #fff;
+  &-head {
+    text-align: center;
+    div {
+      padding-bottom: 1rem;
+    }
+  }
   @include m.mq(large) {
     min-height: 80rem;
   }
@@ -10,8 +16,8 @@
     min-height: 85rem;
   }
   .swiper {
-    width: 20rem;
-    height: 24rem;
+    width: 24rem;
+    height: 28rem;
     &-wrapper {
       width: 100% !important;
       gap: 1rem;
@@ -62,6 +68,12 @@
       }
     }
     &-right {
+      div {
+        padding-bottom: 1rem;
+      }
+      ul {
+        padding-left: 2rem;
+      }
       strong {
         color: var(--orange);
       }

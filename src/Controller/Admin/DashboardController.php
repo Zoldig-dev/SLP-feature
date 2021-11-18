@@ -18,7 +18,6 @@ class DashboardController extends AbstractDashboardController
     /**
      * @Route("/SLPadmin", name="admin")
      */
-
     public function index(): Response
     {
         $routeBuilder = $this->get(AdminUrlGenerator::class);

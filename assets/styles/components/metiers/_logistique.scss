@@ -18,6 +18,16 @@
     justify-content: space-between;
     &-left {
       padding: 2rem;
+      ul {
+        padding-left: 2rem;
+      }
+      div,
+      ul {
+        padding-bottom: 1rem;
+      }
+      a {
+        color: var(--orange);
+      }
       @include m.mq(large) {
         padding: 2rem;
       }

@@ -1,13 +1,26 @@
+@use "../../media-queries" as m;
+
 .approReseaux {
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+  &-content {
+    padding: 1rem 2rem;
+    @include m.mq(large) {
+      flex-wrap: wrap;
+      img {
+        width: 100%;
+        padding-bottom: 1rem;
+      }
+    }
+    div {
+      padding-bottom: 1rem;
+    }
+    a {
+      color: var(--orange);
+    }
+    ul {
+      padding-left: 2rem;
+    }
+  }
 }

@@ -44,6 +44,10 @@
       }
     }
     &-foot {
+      text-align: center;
+      div {
+        padding-bottom: 1rem;
+      }
       @include m.mq(large) {
         padding: 2rem;
       }

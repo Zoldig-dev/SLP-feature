@@ -1,8 +1,10 @@
 <div class="container mt-2 mb-2">
   <h2 class="size-2 pb-2 uppercase center">{{ signaletique.name }}</h2>
-  {{ signaletique.content | raw }}
-  {{ signaletique.content2 | raw }}
-  <div class="swiper mySwiper pt-2 pb-2">
+  <div class="signaletique-head">
+    {{ signaletique.content | raw }}
+    {{ signaletique.content2 | raw }}
+  </div>
+  <div class="swiper mySwiper pt-2 pb-4">
     <div class="swiper-wrapper">
         <!-- Slides -->
         {% for img in slide %}
@@ -11,7 +13,7 @@
     </div>
     <div class="swiper-pagination"></div>
   </div>
-  <div class="signaletique-content flex align-c">
+  <div class="signaletique-content flex align-c pt-2">
     <div class="signaletique-content-left">
         <img src="/uploads/images/Bloc/{{ signaletique.path }}" alt="{{ signaletique.description }}" width="100%">
     </div>
