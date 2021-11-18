@@ -1,0 +1,13 @@
+.error {
+  min-height: 75vh;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+  &-title {
+    color: var(--orange);
+  }
+  &-info,
+  a {
+    color: white;
+  }
+}
