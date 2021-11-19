@@ -2,7 +2,12 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 home_shortcut:
-  path: /
+  path:
+    home: /
+    entreprise: /site/entreprise.html
+    clients: /site/ils-nous-font-confiance.html?Name=Value
+    localisation: /site/situation-geographique.html
+    contact: /site/contact.html
   controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
   defaults:
     route: "home"

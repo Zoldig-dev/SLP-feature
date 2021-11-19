@@ -1,3 +1,5 @@
+@use "../../media-queries" as m;
+
 .easyG {
   justify-content: center;
   align-items: center;
@@ -11,6 +13,9 @@
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 1rem 3rem;
+    @include m.mq(small) {
+      min-height: 150rem;
+    }
   }
   &-title {
     color: var(--orange);
@@ -62,6 +67,9 @@
 
     &.active {
       display: block;
+    }
+    @include m.mq(large) {
+      height: 18rem;
     }
   }
 }

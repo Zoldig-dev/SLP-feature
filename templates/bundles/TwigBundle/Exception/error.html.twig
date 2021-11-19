@@ -2,10 +2,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Page not found</h1>
-
-    <p>
-        The requested page couldn't be located. Checkout for any URL
-        misspelling or <a href="{{ path('home') }}">return to the homepage</a>.
-    </p>
+    <div class="error flex justify-c align-c">
+        <div class="container">
+            <h1 class="error-title size-3 center pb-2">Oops! An Error Occurred</h1>
+            <p class="error-info center pb-2">
+                The server returned a \"{{ status_code }} {{ status_text }}\".
+                The server returned a "500 Internal Server Error".
+                Something is broken. Please let us know what you were doing when this error occurred. We will fix it as soon as possible. Sorry for any inconvenience caused. <a href="{{ path('home') }}">return to the homepage</a>.
+            </p>
+        </div>
+    </div>
 {% endblock %}

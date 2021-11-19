@@ -37,7 +37,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/home", name="home")
+     * @Route("/site", name="home")
      */
     public function index(Request $request, ClientsRepository $clientsRepository): Response
     {
