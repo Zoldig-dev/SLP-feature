@@ -11,7 +11,7 @@
         {{ encore_entry_link_tags('style') }}
     {% endblock %}
 </head>
-<body>
+<body {% block bodyClass %}{% endblock %}>
 {% block header %}{% include 'header/header.html.twig' %}{% endblock %}
 {% block body %}{% endblock %}
 {% block footer %}{% include 'footer/footer.html.twig' %}{% endblock %}

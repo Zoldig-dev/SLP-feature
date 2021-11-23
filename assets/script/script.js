@@ -2,6 +2,8 @@ import { initSwiper } from "./swiper";
 import { initSwiper2 } from "./swiper";
 import { scrollDownTag } from "./scrollDownTag";
 
+const breakpoint = 1200;
+
 // nav
 const navSlide = () => {
   const burger = document.querySelector(".burger");
@@ -50,13 +52,20 @@ function changeContentMetierTo() {
       // on ajoute un écouteur d'événement sur le lien (click)
       sectionContent.forEach((section, sectionKey) => {
         // pour chaque section
-        section.classList.remove("active");
+        if (sectionKey !== linkKey) {
+          section.classList.remove("active");
+        }
         // on supprime la classe active
-        if (sectionKey === linkKey) {
+        if (sectionKey === linkKey && !section.classList.contains("active")) {
           // si la section est égale à la clé du lien cliqué (linkKey) alors on ajoute la classe active
           section.classList.add("active");
         }
       });
+      if (window.innerWidth > breakpoint) {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 10);
+      }
     });
   });
 }

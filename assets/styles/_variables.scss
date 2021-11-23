@@ -8,6 +8,16 @@
   --gris: #f0f0f0;
 }
 
+body {
+  scroll-behavior: smooth;
+
+  &#page_metiers {
+    background-color: var(--noir);
+    min-height: 70vh;
+    font-family: sans-serif;
+  }
+}
+
 // font
 @font-face {
   font-family: "Ubuntu";
